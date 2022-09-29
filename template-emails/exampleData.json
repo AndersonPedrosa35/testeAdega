@@ -1,0 +1,545 @@
+{
+  "orders": [
+    {
+      "package": null,
+      "subjectItemAttachment": {
+        "item": "Aperitivo BUSCA VIDA...",
+        "totalItems": 2,
+        "extraItems": 1
+      },
+      "cancellationReason": null,
+      "items": [
+        {
+          "additionalInfo": {
+            "categoriesIds": "/4/8/",
+            "productClusterId": "137",
+            "commercialConditionId": "1",
+            "dimension": {
+              "cubicweight": 1,
+              "height": 30,
+              "length": 8,
+              "weight": 1500,
+              "width": 8
+            },
+            "brandName": "Anísio Santiago",
+            "brandId": "2000009",
+            "offeringInfo": null,
+            "offeringType": null,
+            "offeringTypeId": null
+          },
+          "sellerSku": "4",
+          "priceTable": null,
+          "priceValidUntil": "2023-02-21T19:08:29Z",
+          "callCenterOperator": null,
+          "commission": 0,
+          "freightCommission": 0,
+          "taxCode": "",
+          "catalogProvider": "vrn:vtex.catalog-api-proxy:-:adegamarche:master:/proxy/authenticated/catalog/pvt/sku/stockkeepingunitbyid/4",
+          "uniqueId": "F6FD2CE0437E42988377542BC8981925",
+          "id": "4",
+          "productId": "4",
+          "productRefId": "",
+          "refId": "20022357",
+          "ean": "7898069770018",
+          "name": "Aguardente ANÍSIO SANTIAGO 600ml",
+          "skuName": "Aguardente ANÍSIO SANTIAGO 600ml",
+          "modalType": null,
+          "parentItemIndex": null,
+          "parentAssemblyBinding": null,
+          "assemblies": [],
+          "tax": 0,
+          "price": 259,
+          "listPrice": 259,
+          "manualPrice": null,
+          "manualPriceAppliedBy": null,
+          "sellingPrice": 259,
+          "rewardValue": 0,
+          "isGift": false,
+          "preSaleDate": null,
+          "productCategoryIds": "/4/8/",
+          "productCategories": {
+            "4": "Destilados",
+            "8": "Aguardente e Cachaça"
+          },
+          "quantity": 1,
+          "seller": "1",
+          "sellerChain": ["1"],
+          "imageUrl": "http://adegamarche.vteximg.com.br/arquivos/ids/157816-55-55/20022357.jpg?v=637798619905900000",
+          "detailUrl": "/aguardente-anisio-santiago-600ml/p",
+          "components": [],
+          "bundleItems": [],
+          "attachments": [],
+          "attachmentOfferings": [],
+          "offerings": [],
+          "priceTags": [],
+          "availability": "available",
+          "measurementUnit": "un",
+          "unitMultiplier": 1,
+          "manufacturerCode": "",
+          "priceDefinition": {
+            "calculatedSellingPrice": 259,
+            "total": 259,
+            "sellingPrices": [
+              {
+                "value": 259,
+                "quantity": 1
+              }
+            ]
+          }
+        },
+        {
+          "additionalInfo": {
+            "categoriesIds": "/4/9/",
+            "productClusterId": "137",
+            "commercialConditionId": "1",
+            "dimension": {
+              "cubicweight": 0.4,
+              "height": 30,
+              "length": 8,
+              "weight": 1500,
+              "width": 8
+            },
+            "brandName": "Busca Vida",
+            "brandId": "2000040",
+            "offeringInfo": null,
+            "offeringType": null,
+            "offeringTypeId": null
+          },
+          "sellerSku": "7",
+          "priceTable": null,
+          "priceValidUntil": "2023-02-21T19:08:29Z",
+          "callCenterOperator": null,
+          "commission": 0,
+          "freightCommission": 0,
+          "taxCode": "",
+          "catalogProvider": "vrn:vtex.catalog-api-proxy:-:adegamarche:master:/proxy/authenticated/catalog/pvt/sku/stockkeepingunitbyid/7",
+          "uniqueId": "9B7B254A7F2842DF930119D82C322B4D",
+          "id": "7",
+          "productId": "7",
+          "productRefId": "",
+          "refId": "20053099",
+          "ean": "7898911010002",
+          "name": "Aperitivo BUSCA VIDA Cachaça Com Mel e Limão 670ml",
+          "skuName": "Aperitivo BUSCA VIDA Cachaça Com Mel e Limão 670ml",
+          "modalType": null,
+          "parentItemIndex": null,
+          "parentAssemblyBinding": null,
+          "assemblies": [],
+          "tax": 0,
+          "price": 8500,
+          "listPrice": 8500,
+          "manualPrice": null,
+          "manualPriceAppliedBy": null,
+          "sellingPrice": 8500,
+          "rewardValue": 0,
+          "isGift": false,
+          "preSaleDate": null,
+          "productCategoryIds": "/4/9/",
+          "productCategories": {
+            "4": "Destilados",
+            "9": "Aperitivo"
+          },
+          "quantity": 1,
+          "seller": "1",
+          "sellerChain": ["1"],
+          "imageUrl": "http://adegamarche.vteximg.com.br/arquivos/ids/155399-55-55/aperitivo-busca-vida-cachaca-com-mel-e-limao-670ml_1.jpg?v=637737949728970000",
+          "detailUrl": "/aperitivo-busca-vida-cachaca-com-mel-e-limao-670ml/p",
+          "components": [],
+          "bundleItems": [],
+          "attachments": [],
+          "attachmentOfferings": [],
+          "offerings": [],
+          "priceTags": [],
+          "availability": "available",
+          "measurementUnit": "un",
+          "unitMultiplier": 1,
+          "manufacturerCode": null,
+          "priceDefinition": {
+            "calculatedSellingPrice": 8500,
+            "total": 8500,
+            "sellingPrices": [
+              {
+                "value": 8500,
+                "quantity": 1
+              }
+            ]
+          }
+        }
+      ],
+      "sellers": [
+        {
+          "subSellerId": "1",
+          "fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=adegamarche",
+          "id": "1",
+          "name": "HORTUS COMÉRCIO DE ALIMENTOS S.A.,",
+          "logo": ""
+        }
+      ],
+      "giftRegistryData": null,
+      "receiptData": null,
+      "contextData": null,
+      "marketPlaceOrderId": "",
+      "marketPlaceOrderGroup": null,
+      "marketplaceServicesEndpoint": null,
+      "orderFormId": "4e4a5e78db114e6c94f2d85b9415b9e6",
+      "sequence": "500003",
+      "affiliateId": "",
+      "status": "",
+      "callCenterOperator": "",
+      "userProfileId": "87e0444b-e9df-4ebe-a5e7-bd5cbd20d90b",
+      "hostName": "adegamarche",
+      "creationVersion": null,
+      "creationEnvironment": null,
+      "lastChangeVersion": null,
+      "workflowInstanceId": null,
+      "marketplacePaymentValue": null,
+      "orderId": "1212430555568-01",
+      "orderGroup": "1212430555568",
+      "state": "payment-pending",
+      "isCheckedIn": false,
+      "sellerOrderId": "00-1212430555568-01",
+      "storeId": null,
+      "checkedInPickupPointId": null,
+      "value": 10617,
+      "totals": [
+        {
+          "id": "Items",
+          "name": "Total dos Itens",
+          "value": 8759
+        },
+        {
+          "id": "Discounts",
+          "name": "Total dos Descontos",
+          "value": 0
+        },
+        {
+          "id": "Shipping",
+          "name": "Total do Frete",
+          "value": 1858
+        },
+        {
+          "id": "Tax",
+          "name": "Total da Taxa",
+          "value": 0
+        }
+      ],
+      "clientProfileData": {
+        "email": "f56c8e490155413ab709f9ae809eda10@ct.vtex.com.br",
+        "firstName": "Gustavo",
+        "lastName": "Guatelli",
+        "document": "31245990802",
+        "documentType": "cpf",
+        "phone": "+5511998899876",
+        "corporateName": null,
+        "tradeName": null,
+        "corporateDocument": null,
+        "stateInscription": null,
+        "corporatePhone": null,
+        "isCorporate": false,
+        "profileCompleteOnLoading": true,
+        "profileErrorOnLoading": false,
+        "customerClass": null
+      },
+      "ratesAndBenefitsData": {
+        "rateAndBenefitsIdentifiers": [],
+        "teaser": []
+      },
+      "shippingData": {
+        "address": {
+          "addressType": "residential",
+          "receiverName": "Gustavo Guatelli",
+          "addressId": "4936402065774",
+          "isDisposable": false,
+          "postalCode": "01404-000",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "BRA",
+          "street": "Alameda Campinas",
+          "number": "1493",
+          "neighborhood": "Jardim Paulista",
+          "complement": null,
+          "reference": null,
+          "geoCoordinates": [-46.65506362915039, -23.567771911621094]
+        },
+        "logisticsInfo": [
+          {
+            "itemIndex": 0,
+            "selectedSla": "Normal",
+            "selectedDeliveryChannel": "delivery",
+            "addressId": "4936402065774",
+            "slas": [
+              {
+                "id": "Normal",
+                "deliveryChannel": "delivery",
+                "name": "Normal",
+                "deliveryIds": [
+                  {
+                    "courierId": "1",
+                    "warehouseId": "1aa9a91",
+                    "dockId": "1afcd84",
+                    "courierName": "Aero asa",
+                    "quantity": 1,
+                    "kitItemDetails": []
+                  }
+                ],
+                "shippingEstimate": "3bd",
+                "shippingEstimateDate": null,
+                "lockTTL": "7d",
+                "availableDeliveryWindows": [],
+                "deliveryWindow": null,
+                "price": 929,
+                "listPrice": 929,
+                "tax": 0,
+                "pickupStoreInfo": {
+                  "isPickupStore": true,
+                  "friendlyName": "loja",
+                  "address": {
+                    "addressType": "residential",
+                    "receiverName": "Gustavo Guatelli",
+                    "addressId": "4936402065774",
+                    "isDisposable": false,
+                    "postalCode": "01404-000",
+                    "city": "São Paulo",
+                    "state": "SP",
+                    "country": "BRA",
+                    "street": "Alameda Campinas",
+                    "number": "1493",
+                    "neighborhood": "Jardim Paulista",
+                    "complement": null,
+                    "reference": null,
+                    "geoCoordinates": [-46.65506362915039, -23.567771911621094]
+                  },
+                  "additionalInfo": null,
+                  "dockId": null
+                },
+                "pickupPointId": null,
+                "pickupDistance": 0,
+                "polygonName": "",
+                "transitTime": "2bd"
+              }
+            ],
+            "shipsTo": ["BRA"],
+            "itemId": "4",
+            "deliveryChannels": [
+              {
+                "id": "delivery"
+              }
+            ]
+          },
+          {
+            "itemIndex": 1,
+            "selectedSla": "Normal",
+            "selectedDeliveryChannel": "delivery",
+            "addressId": "4936402065774",
+            "slas": [
+              {
+                "id": "Normal",
+                "deliveryChannel": "delivery",
+                "name": "Normal",
+                "deliveryIds": [
+                  {
+                    "courierId": "1",
+                    "warehouseId": "1aa9a91",
+                    "dockId": "1afcd84",
+                    "courierName": "Aero asa",
+                    "quantity": 1,
+                    "kitItemDetails": []
+                  }
+                ],
+                "shippingEstimate": "3bd",
+                "shippingEstimateDate": null,
+                "lockTTL": "7d",
+                "availableDeliveryWindows": [],
+                "deliveryWindow": null,
+                "price": 929,
+                "listPrice": 929,
+                "tax": 0,
+                "pickupStoreInfo": {
+                  "isPickupStore": true,
+                  "friendlyName": "loja",
+                  "address": "Rua Teste, 168, São Paulo, SP",
+                  "additionalInfo": null,
+                  "dockId": null
+                },
+                "pickupPointId": null,
+                "pickupDistance": 0,
+                "polygonName": "",
+                "transitTime": "2bd"
+              }
+            ],
+            "shipsTo": ["BRA"],
+            "itemId": "7",
+            "deliveryChannels": [
+              {
+                "id": "delivery"
+              }
+            ]
+          }
+        ],
+        "selectedAddresses": [
+          {
+            "addressType": "residential",
+            "receiverName": "Gustavo Guatelli",
+            "addressId": "4936402065774",
+            "isDisposable": false,
+            "postalCode": "01404-000",
+            "city": "São Paulo",
+            "state": "SP",
+            "country": "BRA",
+            "street": "Alameda Campinas",
+            "number": "1493",
+            "neighborhood": "Jardim Paulista",
+            "complement": null,
+            "reference": null,
+            "geoCoordinates": [-46.65506362915039, -23.567771911621094]
+          }
+        ],
+        "availableAddresses": [
+          {
+            "addressType": "residential",
+            "receiverName": "Gustavo Guatelli",
+            "addressId": "4936402065774",
+            "isDisposable": false,
+            "postalCode": "01404-000",
+            "city": "São Paulo",
+            "state": "SP",
+            "country": "BRA",
+            "street": "Alameda Campinas",
+            "number": "1493",
+            "neighborhood": "Jardim Paulista",
+            "complement": null,
+            "reference": null,
+            "geoCoordinates": [-46.65506362915039, -23.567771911621094]
+          }
+        ],
+        "pickupPoints": []
+      },
+      "paymentData": {
+        "giftCards": [],
+        "transactions": [
+          {
+            "isActive": true,
+            "transactionId": "5674D05BFAE64F3C9BBAC531BF3FDE12",
+            "merchantName": "ADEGAMARCHE",
+            "payments": [
+              {
+                "id": "97BC683F65704D79B0DF8A36C9611612",
+                "paymentSystem": "202",
+                "paymentSystemName": "Teste b8one",
+                "value": 10617,
+                "installments": 1,
+                "connectorResponses": {},
+                "referenceValue": 10617,
+                "cardHolder": null,
+                "cardNumber": null,
+                "firstDigits": null,
+                "lastDigits": null,
+                "cvv2": null,
+                "expireMonth": null,
+                "expireYear": null,
+                "url": null,
+                "koinUrl": null,
+                "tid": null,
+                "redemptionCode": null,
+                "giftCardId": null,
+                "giftCardProvider": null,
+                "giftCardAsDiscount": null,
+                "group": "promissory",
+                "dueDate": null,
+                "accountId": null,
+                "parentAccountId": null,
+                "bankIssuedInvoiceIdentificationNumber": null,
+                "bankIssuedInvoiceIdentificationNumberFormatted": null,
+                "bankIssuedInvoiceBarCodeNumber": null,
+                "bankIssuedInvoiceBarCodeType": null,
+                "billingAddress": null
+              }
+            ],
+            "sharedTransaction": false
+          }
+        ]
+      },
+      "clientPreferencesData": {
+        "locale": "pt-BR",
+        "optinNewsLetter": true
+      },
+      "commercialConditionData": null,
+      "marketingData": null,
+      "storePreferencesData": {
+        "countryCode": "BRA",
+        "saveUserData": false,
+        "timeZone": "E. South America Standard Time",
+        "currencyCode": "BRL",
+        "currencyLocale": 1046,
+        "currencySymbol": "R$",
+        "currencyFormatInfo": {
+          "currencyDecimalDigits": 2,
+          "currencyDecimalSeparator": ",",
+          "currencyGroupSeparator": ".",
+          "currencyGroupSize": 3,
+          "startsWithCurrencySymbol": true
+        }
+      },
+      "openTextField": null,
+      "invoiceData": null,
+      "itemMetadata": null,
+      "taxData": null,
+      "customData": null,
+      "hooksData": null,
+      "changeData": null,
+      "subscriptionData": null,
+      "salesChannel": "1",
+      "followUpEmail": "2197fd7969754827ae7ac1c18f133d8b@ct.vtex.com.br",
+      "creationDate": "2022-02-21T19:09:14.4723865Z",
+      "lastChange": "2022-02-21T19:09:19.1269619Z",
+      "timeZoneCreationDate": "2022-02-21T16:09:14.4723865",
+      "timeZoneLastChange": "2022-02-21T16:09:19.1269619",
+      "isCompleted": true,
+      "merchantName": null,
+      "userType": "",
+      "roundingError": 0,
+      "allowEdition": false,
+      "allowCancellation": false,
+      "isUserDataVisible": false,
+      "allowChangeSeller": false
+    }
+  ],
+  "ordersUrl": "http://adegamarche.vtexcommercestable.com.br/account#/orders",
+  "orderGroup": "1212430555568",
+  "subjectItemAttachment": {
+    "item": "Aperitivo BUSCA VIDA...",
+    "totalItems": 2,
+    "extraItems": 1
+  },
+  "split": false,
+  "totalValue": 10617,
+  "callCenterOperatorData": null,
+  "_accountInfo": {
+    "MainAccountName": "adegamarche",
+    "AccountName": "adegamarche",
+    "Cnpj": "09000493000215",
+    "Id": "8277b0af-600d-46fc-8104-3856ec7b5f32",
+    "AppId": null,
+    "IsActive": true,
+    "IsOperating": false,
+    "CreationDate": "2021-10-26T02:14:24.8052596Z",
+    "OperationDate": null,
+    "CompanyName": "HORTUS COMÉRCIO DE ALIMENTOS S.A.,",
+    "TradingName": "HORTUS COMÉRCIO DE ALIMENTOS S.A.,",
+    "City": null,
+    "Complement": null,
+    "Country": null,
+    "State": null,
+    "Address": null,
+    "District": null,
+    "Number": null,
+    "PostalCode": null,
+    "Licenses": [7],
+    "ParentAccountName": null,
+    "InactivationDate": null,
+    "Platform": "vtex",
+    "Privacy": null,
+    "HasPiiRestriction": false,
+    "Infra": null
+  }
+}

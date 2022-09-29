@@ -1,0 +1,63 @@
+.customModalLogout{
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customModalLogoutOverlay{
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.customModalLogoutContent{
+  background-color: #fff;
+  z-index: 999;
+  position: relative;
+  padding: 1.5rem;
+  width: 50%;
+  border-radius: 4px;
+}
+
+.customModalLogoutIconClose{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.customModalLogoutIconTitle{
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.customModalLogoutButtons{
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+}
+
+.customModalLogoutButtonCancel, .customModalLogoutButtonLogout{
+  border: 0;
+  background: #4f285d;
+  color: #fff;
+  height: 32px;
+  padding: 0 1rem;
+  line-height: 32px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 959px){
+  .customModalLogoutContent{
+    width: 90%;
+  }
+}

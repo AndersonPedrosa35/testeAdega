@@ -1,0 +1,86 @@
+@import "src/styles/scaffold";
+
+.fs-price-range {
+  padding-top: 10px;
+
+  --fs-price-range-slider-height: 4px;
+  --fs-price-range-slider-border-radius: var(--fs-border-radius);
+
+  // Slider
+  --fs-price-range-slider-bkg-color: var(--fs-color-primary-bkg-light);
+  --fs-price-range-slider-range-bkg-color: var(--fs-color-primary-bkg);
+
+  // Thumb
+  --fs-price-range-slider-thumb-bkg-color: var(--fs-color-tertiary-bkg-light);
+  --fs-price-range-slider-thumb-radius: var(--fs-border-radius-circle);
+  --fs-price-range-slider-thumb-size: 1rem;
+  --fs-price-range-slider-thumb-border-color: var(--fs-border-color);
+  --fs-price-range-slider-thumb-border-width: var(--fs-border-width);
+
+
+  [data-store-slider] {
+    position: relative;
+    width: 100%;
+    height: var(--fs-price-range-slider-height);
+    background-color: #CCC;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  [data-slider-range] {
+    position: absolute;
+    height: var(--fs-price-range-slider-height);
+    background-color: var(--primary-medium);
+    border-radius: var(--fs-price-range-slider-border-radius);
+  }
+
+
+  [data-slider-thumb],
+  [data-slider-thumb]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    pointer-events: auto;
+    cursor: col-resize;
+    box-shadow: inset 0px 0px 0px 6px var(--neutral-lightest);
+    background-color: #ccc;
+    border: 1px solid #E5E5E5;
+    border-radius: 20px;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  [data-slider-thumb]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    pointer-events: auto;
+    cursor: col-resize;
+    box-shadow: inset 0px 0px 0px 6px var(--neutral-lightest);
+    background-color: #ccc;
+    border: 1px solid #E5E5E5;
+    border-radius: 20px;
+  }
+
+  [data-slider-thumb] {
+    position: absolute;
+    width: inherit;
+    height: 0;
+    margin: calc(var(--fs-price-range-slider-height) / 2) 0;
+    pointer-events: none;
+    border: none;
+  }
+
+  [data-slider-thumb="left"] {
+    z-index: 1;
+  }
+
+  [data-slider-thumb="right"] {
+    z-index: 2;
+  }
+
+  [data-price-range-values] {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: .75rem;
+  }
+}

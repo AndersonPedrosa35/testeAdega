@@ -1,0 +1,130 @@
+@import "src/styles/scaffold";
+
+.textseo {
+  &__content {
+    position: relative;
+
+    &-title {
+      color: var(--primary-dark);
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    &-text {
+      max-height: 20px;
+      overflow: hidden;
+      transition: max-height 500ms;
+      max-width: 90%;
+
+      @include mobile {
+        max-height: 38px;
+        margin-bottom: 1.125rem;
+        max-width: 100%;
+      }
+
+      &.active {
+        display: inline-block;
+        max-height: 1000px;
+        overflow: initial;
+        max-width: 100%;
+      }
+
+      p{
+        font-size: .87rem;
+        color: var(--neutral-dark);
+        margin-bottom: .5rem;
+        line-height: 1.3;
+      }
+    }
+
+    &-button {
+      min-width: 96px;
+      display: flex;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.87rem;
+      display: flex;
+      align-items: flex-end;
+      line-height: 1.5rem;
+      transition: all 300ms;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: var(--neutral-lightest);
+
+      &[data-store-button] {
+        padding: 0;
+      }
+
+      &:hover{
+        opacity: .5;
+
+        @include mobile {
+          opacity: 1;
+        }
+      }
+
+      @include mobile {
+        position: relative;
+        bottom: initial;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      i {
+        width: 24px;
+        height: 24px;
+        border: 2px solid var(--primary-dark);
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+          content: "";
+          display: flex;
+          width: 11px;
+          height: 11px;
+          background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.063 4.875H6.124V.937A.47.47 0 0 0 5.687.5h-.875a.45.45 0 0 0-.437.438v3.937H.437A.45.45 0 0 0 0 5.313v.875c0 .246.191.437.438.437h3.937v3.938c0 .246.191.437.438.437h.875a.45.45 0 0 0 .437-.438V6.626h3.938a.45.45 0 0 0 .437-.438v-.875a.47.47 0 0 0-.438-.437Z' fill='%2372537D'/%3E%3C/svg%3E");
+        }
+      }
+
+      &.active {
+        min-width: 110px;
+        bottom: -20px;
+
+        @include mobile {
+          bottom: initial;
+        }
+
+        i {
+          &:before {
+            width: 10px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8h12' stroke='%2372537D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
+
+//   &-content {
+//     font-size: 0.87rem;
+//     color: $neutral-dark;
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 1rem;
+//     line-height: 1.125rem;
+
+//     @include mobile {
+//       flex-direction: column;
+//       border-bottom: 1px solid #e5e5e5;
+//     }
+//   }
+}

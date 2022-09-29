@@ -1,0 +1,47 @@
+@import './../scaffold.scss';
+
+.message__error {
+  display: flex;
+  max-width: 50%;
+  margin: 100px auto;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  @include mobile {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 50px auto;
+    gap: 1rem;
+  }
+
+  div {
+    &:nth-child(1) {
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: var(--primary-darkest);
+    }
+  }
+
+  strong {
+    font-size: 1.5rem;
+    color: var(--secondary-darkest);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 1rem;
+      list-style: disc;
+    }
+  }
+}

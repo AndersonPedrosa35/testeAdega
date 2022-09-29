@@ -1,0 +1,77 @@
+.wishlist{
+
+  &__button{
+    position: absolute;
+    top: 0;
+    right: .9rem;
+    transition: all 300ms;
+    cursor: pointer;
+
+    @include mobile{
+      top: .3rem;
+      right: .6rem;
+    }
+
+    &-remove{
+      svg{
+        fill: var(--primary-dark);
+
+        path{
+          stroke: var(--primary-dark);
+        }
+      }
+    }
+
+    &-add{
+      animation: heart 300ms;
+
+      svg {
+        fill: transparent;
+      }
+    }
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  &__message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: var(--primary-darkest);
+
+    a{
+      display: inline-block;
+      height: 50px;
+      background: var(--primary-dark);
+      color: var(--neutral-lightest);
+      padding: 0 1.5rem;
+      line-height: 50px;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      border-radius: 4px;
+      transition: all 300ms;
+
+      &:hover{
+        opacity: .8;
+      }
+    }
+  }
+
+  &__products{
+    margin: 4rem 0;
+  }
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

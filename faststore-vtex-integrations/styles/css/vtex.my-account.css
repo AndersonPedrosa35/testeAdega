@@ -1,0 +1,376 @@
+
+:global(.vtex-account){
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 4rem;
+  width: 100%;
+}
+
+.userInfo{
+  margin-top:0;
+  margin-bottom: 2.5rem;
+}
+
+.userImage{
+  display: none;
+}
+
+.userGreeting, .userName{
+  color: #4f285d;
+  font-size: 1.5rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.userGreeting{
+  margin-right: .3rem;
+}
+
+:global(.vtex-account__page){
+  position: relative;
+}
+
+:global(.vtex-account) :global(.vtex-pageHeader__container){
+  position: relative;
+  padding-left: 0;
+  padding-top: 1.8rem;
+  padding-right: 0;
+}
+
+:global(.vtex-account) :global(.vtex-pageHeader__container) :not(:global(.vtex-fake)){
+  margin-top: 0;
+}
+
+:global(.vtex-account) :global(.vtex-button__label),
+:global(.vtex-account) :global(.vtex-button){
+  text-transform: capitalize;
+}
+
+:global(.vtex-pageHeader-link__container){
+  position: absolute;
+  top: 2px;
+  margin-bottom: 0 !important;
+}
+
+:global(.vtex-account) :global(.vtex-account__page-body){
+  padding: 0;
+}
+
+
+:global(.vtex-account) :global(.vtex-pageHeader__title){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+:global(.vtex-my-authentication-1-x-authenticationScreen_container){
+  padding-left: 0;
+}
+
+.menuLinks :global(.vtex-my-account-1-x-menuLink){
+  display: none;
+}
+
+.menuLinks :global(.vtex-account_menu-link),
+.menuLinks :global(.vtex-my-account-1-x-menuLink){
+  font-size: 1rem;
+  color: #40464D;
+  padding: 0.375rem 1rem;
+  margin: 0 0 1.75rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+  margin-left: -1.5rem;
+  font-weight: normal;
+}
+
+.boxContainer{
+  box-shadow: 0px 5px 75px #57575712;
+  border: 0;
+}
+
+.boxContainerBody{
+  padding: 2.625rem 2rem 0;
+}
+
+.dataEntryLabel{
+  font-size: 1.25rem;
+  color: #4F484699;
+  font-family: Arial, 'Helvetica', sans-serif;
+  margin-bottom: .6rem;
+}
+
+.dataEntryChildren{
+  color: #4f285d;
+  font: 1.25rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+.boxContainer{
+  font-family: Arial, 'Helvetica', sans-serif;
+  color: #4f285d;
+  font-size: 1rem;
+}
+
+.boxContainerFooter{
+  padding: 2rem;
+}
+
+.boxContainerFooter :global(.vtex-button){
+  background: none;
+}
+
+.boxContainerBody :global(.vtex-button){
+  background: #4f285d;
+  font-size: 1rem;
+  color: #fff;
+  font-family: Arial, 'Helvetica', sans-serif;
+  height: 50px;
+  border: 0;
+  border-radius: 3px;
+}
+
+.passwordBox :global(.vtex__icon-check){
+  background: #4f285d;
+  width: 20px;
+  height: 20px;
+}
+
+:global(.vtex-address-form__country) :global(.vtex-dropdown__label){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+.phoneNumberContainer .dateOfBirthSubContainer,
+.phoneNumberContainer .phoneNumberSubContainer  {
+  margin-bottom: 0;
+}
+
+.passwordBox .dataEntryLabel{
+  font-size: 1rem;
+}
+
+.passwordBox .dataEntryChildren{
+  font-size: 1.25rem;
+}
+
+.passwordBoxContainer {
+  font-size: 1rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+.passwordBoxContainer .boxContainerBody{
+  padding: 2rem;
+}
+
+:global(.vtex-input__label){
+  color: #4f285d;
+  font-size: 1rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+:global(.vtex-input-prefix__group){
+  border-radius: 3px;
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+.newsletterBoxContainer .boxContainerBody{
+  padding: 2rem;
+}
+
+.newsletterBoxContainer .newsletterContainerTitle{
+  display: none;
+}
+
+.newsletterContainerMessage{
+  color: #4F484699;
+  font-size: 1rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.passwordBox :global(.vtex-checkbox__container),
+.passwordBox :global(.vtex-checkbox__box-wrapper),
+.passwordBox :global(.vtex-checkbox__box),
+.passwordBox :global(.vtex-checkbox__input),
+.passwordBox :global(.vtex-checkbox__inner-container) {
+  width: 22px;
+  height: 22px;
+}
+
+.passwordBox :global(.vtex-checkbox__inner-container){
+  border: 1px solid #707070;
+  border-radius: 3px;
+}
+
+.newsletterBoxContainer .passwordBox :global(.vtex-checkbox__label){
+  color: #4f285d;
+  font-size: 1rem;
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+:global(.vtex-profile-form-3-x-profileContainer) :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper) :global(.vtex-button){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  color: #4f285d;
+  border: 1px solid #4f285d;
+  background: #fff;
+}
+
+
+:global(.vtex-profile-form-3-x-profileContainer) :global(.vtex-button){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  background: #4f285d;
+  color: #fff;
+  border: 0;
+}
+
+:global(.vtex-profile-form-3-x-personalFields) :global(.vtex-input-prefix__group){
+  border: 0;
+}
+
+:global(.vtex-profile-form-3-x-styleguideInput) :global(.vtex-input__label),
+:global(.vtex-profile-form-3-x-styleguideInput) :global(.vtex-dropdown__label){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  color: #4f285d;
+}
+
+:global(.vtex-account__cards-list){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  color: #4f285d;
+}
+
+:global(.vtex-pageHeader__title){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1.5rem;
+  color: #4f285d;
+}
+
+:global(.vtex-pageHeader__children) :global(.vtex-button){
+  background: #4f285d;
+  color: #fff;
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  border: 0;
+  display: inline-block;
+}
+
+:global(.vtex-styleguide-9-x-dropdown) :global(.vtex-dropdown__label){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+:global(.vtex-modal__confirmation) :global(.vtex-button){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+  border: 0;
+  background: #4f285d;
+  color: #fff;
+}
+
+:global(.vtex-my-orders-app-3-x-orderCard),
+:global(.vtex-my-orders-app-3-x-orderProduct),
+:global(.vtex-my-orders-app-3-x-font ){
+  font-family: Arial, 'Helvetica', sans-serif;
+}
+
+:global(.vtex-my-orders-app-3-x-detailsBtn){
+  background: #4f285d;
+  color: #fff;
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+:global(.vtex-my-orders-app-3-x-orderProductName){
+  color: #B87C37;
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+.menu{
+  width: 282px;
+  padding-left: 0;
+  min-width: 282px;
+  position: relative;
+  padding-top: 2rem;
+}
+
+:global(.vtex-my-orders-app-3-x-summary){
+  min-width: 300px;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 959px){
+  :global(.vtex-account__page) :global(.vtex-pageHeader__container){
+    display: flex;
+  }
+
+  .phoneNumberContainer .dateOfBirthSubContainer,
+  .phoneNumberContainer .phoneNumberSubContainer  {
+    margin-bottom: 3rem;
+  }
+
+
+  .menuLinks :global(.vtex-account_menu-link),
+  .menuLinks :global(.vtex-my-account-1-x-menuLink){
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .menuLinks :global(.vtex-my-account-1-x-menuLink){
+    margin-bottom: 0;
+  }
+
+  .menu{
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  :global(.vtex-account__page-body),
+  :global(.vtex-pageHeader__container){
+    padding: 0;
+  }
+
+  :global(.vtex-pageHeader__title){
+    margin-bottom: 1.5rem;
+  }
+
+  .addressBox :global(.boxContainer){
+    width: calc(100vw - 3rem);
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderCard){
+    margin-top: 0;
+  }
+
+  .userInfo{
+    margin: 0 0 1.5rem;
+  }
+
+  .userInfo::before{
+    display: none;
+  }
+
+  :global(.vtex-pageHeader-link__container) :global(.vtex-button){
+    display: block;
+  }
+
+  :global(.vtex-pageHeader__container){
+    margin-bottom: 1rem;
+  }
+
+  :global(.vtex-account){
+    padding: 1.5rem;
+  }
+
+  :global(.vtex-my-orders-app-3-x-summary){
+    min-width: 100%;
+  }
+
+}

@@ -1,0 +1,661 @@
+[
+  {
+    "id": "home",
+    "name": "Home Page",
+    "configurationSchemaSets": []
+  },
+  {
+    "id": "institutionalPage",
+    "name": "Institutional page",
+    "configurationSchemaSets": [
+      {
+        "name": "SEO",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Site Metadata",
+              "description": "Configure global site metadata",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "title": {
+                  "title": "Title",
+                  "description": "Display this title when no other tile is available",
+                  "type": "string",
+                  "default": "Store Theme | VTEX SFJ"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifuly designed site for general VTEX stores"
+                },
+                "slug": {
+                  "title": "URL Slug",
+                  "type": "string",
+                  "default": "/landing-page-url"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "politicsPage",
+    "name": "Institucional Políticas",
+    "configurationSchemaSets": [
+      {
+        "name": "SEO",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Site Metadata",
+              "description": "Configure global site metadata",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "title": {
+                  "title": "Título da Página",
+                  "description": "Titúlo a ser exibido como nome da página tanto como nome no meu interno",
+                  "type": "string",
+                  "default": "Store Theme | VTEX SFJ"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifuly designed site for general VTEX stores"
+                },
+                "slug": {
+                  "title": "URL da Página",
+                  "type": "string",
+                  "default": "/landing-page-url"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "menuLateral",
+        "configurations": [
+          {
+            "name": "menuLateral",
+            "schema": {
+              "title": "Menu Lateral",
+              "description": "Menu Lateral Institutional",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "Título",
+                  "description": "Título do menu lateral",
+                  "type": "string",
+                  "default": "Mais informações"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "footer",
+    "name": "Footer",
+    "configurationSchemaSets": [
+      {
+        "name": "menuFooter",
+        "configurations": [
+          {
+            "name": "menu",
+            "schema": {
+              "title": "Footer",
+              "description": "Menu Footer",
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "array",
+                  "title": "Colunas Menu Footer",
+                  "items": {
+                    "type": "object",
+                    "title": "Coluna",
+                    "properties": {
+                      "title": {
+                        "title": "Título Coluna",
+                        "type": "string"
+                      },
+                      "links": {
+                        "type": "array",
+                        "title": "Links",
+                        "items": {
+                          "type": "object",
+                          "title": "Link",
+                          "properties": {
+                            "title": {
+                              "title": "Título Link",
+                              "type": "string"
+                            },
+                            "link": {
+                              "title": "Link",
+                              "type": "string"
+                            },
+                            "target": {
+                              "title": "Abrir link em uma nova aba",
+                              "type": "boolean",
+                              "default": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "contatoFooter",
+        "configurations": [
+          {
+            "name": "contacts",
+            "schema": {
+              "title": "Coluna Atendimento",
+              "description": "Informações de contato",
+              "type": "object",
+              "properties": {
+                "buttonContact": {
+                  "type": "object",
+                  "title": "Botão Contato",
+                  "properties": {
+                    "textButton": {
+                      "title": "Texto Botão",
+                      "type": "string",
+                      "default": "Envie uma Mensagem"
+                    },
+                    "link": {
+                      "title": "Link",
+                      "type": "string"
+                    }
+                  }
+                },
+                "infoAtendimento": {
+                  "type": "object",
+                  "title": "Horário Atendimento",
+                  "properties": {
+                    "text": {
+                      "title": "Texto",
+                      "type": "string",
+                      "default": "Segunda à sexta-feira das 9h às 18h Sábados das 9 às 12h"
+                    }
+                  }
+                },
+                "socialMedia": {
+                  "type": "object",
+                  "title": "Redes Sociais",
+                  "properties": {
+                    "listSocialMedia": {
+                      "type": "array",
+                      "title": "Redes Sociais",
+                      "items": {
+                        "type": "object",
+                        "title": "Social",
+                        "properties": {
+                          "image": {
+                            "title": "Ícone",
+                            "description": "É recomendável que a imagem tenha 22x22px",
+                            "type": "string",
+                            "widget": {
+                              "ui:widget": "image-uploader"
+                            }
+                          },
+                          "alt": {
+                            "title": "Alt",
+                            "description": "Alt imagem",
+                            "type": "string"
+                          },
+                          "link": {
+                            "title": "Link",
+                            "description": "Example: https://www.google.com",
+                            "type": "string"
+                          },
+                          "target": {
+                            "title": "Abrir link em uma nova aba",
+                            "type": "boolean",
+                            "default": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "pagamentosDisponiveis",
+        "configurations": [
+          {
+            "name": "payments",
+            "schema": {
+              "title": "Pagamentos disponíveis",
+              "description": "Cartões disponiveis para pagamento na loja",
+              "type": "object",
+              "properties": {
+                "listPayment": {
+                  "type": "array",
+                  "title": "Cartões",
+                  "items": {
+                    "type": "object",
+                    "title": "Cartão",
+                    "properties": {
+                      "image": {
+                        "title": "Image",
+                        "description": "É recomendável que a imagem tenha 38x28px",
+                        "type": "string",
+                        "widget": {
+                          "ui:widget": "image-uploader"
+                        }
+                      },
+                      "alt": {
+                        "title": "Alt",
+                        "description": "Alt imagem",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "selos",
+        "configurations": [
+          {
+            "name": "certificates",
+            "schema": {
+              "title": "Selos",
+              "description": "Selos como ebit, reclame aqui etc",
+              "type": "object",
+              "properties": {
+                "listCertificates": {
+                  "type": "array",
+                  "title": "Selos",
+                  "items": {
+                    "type": "object",
+                    "title": "Selo",
+                    "properties": {
+                      "image": {
+                        "title": "Imagem",
+                        "description": "Imagem do selo",
+                        "type": "string",
+                        "widget": {
+                          "ui:widget": "image-uploader"
+                        }
+                      },
+                      "alt": {
+                        "title": "Alt",
+                        "description": "Alt imagem",
+                        "type": "string"
+                      },
+                      "link": {
+                        "title": "Link",
+                        "description": "Link imagem",
+                        "type": "string"
+                      },
+                      "target": {
+                        "title": "Abrir link em uma nova aba",
+                        "type": "boolean",
+                        "default": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "infosRodape",
+        "configurations": [
+          {
+            "name": "informations",
+            "schema": {
+              "title": "Informações de Rodapé",
+              "description": "Informações que vão no final do footer",
+              "type": "object",
+              "properties": {
+                "copyright": {
+                  "title": "Copyright",
+                  "type": "string",
+                  "default": "2021 @ All Right Reserved"
+                },
+                "infoBusiness": {
+                  "title": "Informações sobre a empresa",
+                  "type": "string",
+                  "default": "HORTUS COMERCIO DE ALIMENTOS S.A CNPJ 09000.493/0001-34"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "header",
+    "name": "Header",
+    "configurationSchemaSets": [
+      {
+        "name": "topbar",
+        "configurations": [
+          {
+            "name": "topbarText",
+            "schema": {
+              "title": "Topbar Texto",
+              "description": "topbar",
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Texto",
+                  "type": "string",
+                  "widget": {
+                    "ui:widget": "draftjs-rich-text"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "menu",
+        "configurations": [
+          {
+            "name": "menuItems",
+            "schema": {
+              "title": "MenuHeader",
+              "description": "Menu Header",
+              "type": "object",
+              "properties": {
+                "menu": {
+                  "type": "array",
+                  "title": "Menu",
+                  "items": {
+                    "type": "object",
+                    "title": "Menu Item",
+                    "properties": {
+                      "item": {
+                        "title": "Link",
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "title": "Título Link",
+                            "type": "string"
+                          },
+                          "link": {
+                            "title": "Link",
+                            "type": "string"
+                          },
+                          "submenuImage": {
+                            "type": "string",
+                            "title": "Submenu Image",
+                            "widget": {
+                              "ui:widget": "image-uploader"
+                            }
+                          },
+                          "submenu": {
+                            "type": "array",
+                            "title": "Submenu",
+                            "items": {
+                              "type": "object",
+                              "title": "Coluna",
+                              "properties": {
+                                "title": {
+                                  "title": "Título Coluna",
+                                  "type": "string"
+                                },
+                                "links": {
+                                  "type": "array",
+                                  "title": "Links",
+                                  "items": {
+                                    "type": "object",
+                                    "title": "Link",
+                                    "properties": {
+                                      "title": {
+                                        "title": "Título Link",
+                                        "type": "string"
+                                      },
+                                      "link": {
+                                        "title": "Link",
+                                        "type": "string"
+                                      },
+                                      "linkHighlight": {
+                                        "title": "Link em Destaque",
+                                        "description": "O link ficará com a uma cor de destaque, diferente dos demais links.",
+                                        "type": "boolean",
+                                        "default": false
+                                      },
+                                      "target": {
+                                        "title": "Abrir link em uma nova aba",
+                                        "type": "boolean",
+                                        "default": false
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "category",
+    "name": "Categoria",
+    "configurationSchemaSets": [
+      {
+        "name": "InfoPage",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Informações categoria",
+              "description": "Informações categoria",
+              "type": "object",
+              "properties": {
+                "seo": {
+                  "title": "SEO",
+                  "description": "Informações de SEO",
+                  "type": "object",
+                  "properties": {
+                    "slug": {
+                      "title": "Slug",
+                      "description": "O slug da página que refletira as alterações",
+                      "type": "string",
+                      "default": "slug"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "collection",
+    "name": "Coleção",
+    "configurationSchemaSets": [
+      {
+        "name": "InfoPage",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Configurações da página de coleção",
+              "description": "Landinpage de coleção",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "seo": {
+                  "title": "SEO",
+                  "description": "Informações de SEO",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "title": "Título da Página",
+                      "description": "Titúlo a ser exibido como nome da página tanto como nome no meu interno",
+                      "type": "string",
+                      "default": "Store Theme | VTEX SFJ"
+                    },
+                    "description": {
+                      "title": "Meta tag description",
+                      "type": "string",
+                      "default": "A beautifuly designed site for general VTEX stores"
+                    },
+                    "slug": {
+                      "title": "URL da Página",
+                      "type": "string",
+                      "default": "/collection-page-url",
+                      "description": "URL que ficará disponível em /{url}"
+                    }
+                  }
+                },
+                "configCollection": {
+                  "title": "Configurações da página",
+                  "type": "object",
+                  "properties": {
+                    "maxQuantityProducts": {
+                      "type": "number",
+                      "title": "Quantidade máxima de produtos"
+                    },
+                    "sort": {
+                      "title": "Ordenação",
+                      "type": "string",
+                      "default": "\"\"",
+                      "enum": [
+                        "\"\"",
+                        "discount_desc",
+                        "release_desc",
+                        "name_asc",
+                        "name_desc",
+                        "orders_desc",
+                        "price_asc",
+                        "price_desc"
+                      ],
+                      "enumNames": [
+                        "Relevante",
+                        "Descontos",
+                        "Mais Recentes",
+                        "De A a Z",
+                        "De Z a A",
+                        "Mais Vendidos",
+                        "Maior Preço",
+                        "Menor Preço"
+                      ]
+                    },
+                    "brand": {
+                      "type": "string",
+                      "title": "Brand",
+                      "description": "Adicione o nome da marca"
+                    },
+                    "categories": {
+                      "type": "string",
+                      "title": "Departamento/Categoria/Subcategoria",
+                      "description": "Adicione os nomes na seguinte ordem {nomeDepartamento}/{nomeCategoria}/{nomeSubcategoria}. Se for apenas um departamento, adicione apenas o nome do departamento, e assim por diante."
+                    },
+                    "collection": {
+                      "type": "string",
+                      "title": "Coleção",
+                      "description": "Id coleção"
+                    },
+                    "rangePrice": {
+                      "type": "string",
+                      "title": "Filtro de Preço",
+                      "description": "Adicione dois valores exemplo 50:100 (50 até 100)"
+                    },
+                    "term": {
+                      "type": "string",
+                      "title": "Termo",
+                      "description": "Termo de busca: exemplo 'Vinho'"
+                    },
+                    "hideUnavailableItems": {
+                      "default": true,
+                      "type": "boolean",
+                      "title": "Mostrar produtos indisponíveis"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "landingPageCustom",
+    "name": "Landing Page Customizada",
+    "configurationSchemaSets": [
+      {
+        "name": "SEO",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Site Metadata",
+              "description": "Configure global site metadata",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "title": {
+                  "title": "Title",
+                  "description": "Display this title when no other tile is available",
+                  "type": "string",
+                  "default": "Store Theme | VTEX SFJ"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifuly designed site for general VTEX stores"
+                },
+                "slug": {
+                  "title": "URL Slug",
+                  "type": "string",
+                  "default": "/landing-page-url"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

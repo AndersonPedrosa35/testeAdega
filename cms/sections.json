@@ -1,0 +1,726 @@
+[
+  {
+    "name": "Banner FullWidth",
+    "schema": {
+      "title": "Banner FullWidth",
+      "description": "Banner FullWidth (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "banners": {
+          "type": "array",
+          "title": "Banners",
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "desktopImage": {
+                "title": "Banner Desktop",
+                "description": "É recomendável que o banner desktop tenha 1440x320px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Banner Mobile",
+                "description": "É recomendável que o banner mobile tenha 330x260px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImageSize": {
+                "title": "Size mobile image",
+                "description": "Defina o tamanho de altura e largura da imagem no mobile",
+                "type": "string"
+              },
+              "desktopImageSize": {
+                "title": "Size desktop image",
+                "description": "Defina o tamanho de altura e largura da imagem no desktop",
+                "type": "string"
+              },
+              "alt": {
+                "title": "Alt Banner",
+                "description": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link Banner",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              },
+              "collectionId": {
+                "title": "Id Coleção",
+                "description": "Adicione o id da coleção",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Tipbar",
+    "schema": {
+      "title": "Tipbar",
+      "description": "Tipbar (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "tipbar": {
+          "type": "array",
+          "title": "Tipbar Items",
+          "items": {
+            "type": "object",
+            "title": "Tipbar Item",
+            "properties": {
+              "icon": {
+                "title": "Ícone",
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "title": "Imagem",
+                    "description": "É recomendável que a imagem seja do tipo png, ou tenha fundo branco. Com 160x104px de dimensão.",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "alt": {
+                    "title": "Alt Imagem",
+                    "description": "Alt imagem",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Prateleira",
+    "schema": {
+      "title": "Prateleira",
+      "description": "Prateleira (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título Prateleira"
+        },
+        "searchParams": {
+          "type": "object",
+          "title": "Configurações da Prateleira",
+          "properties": {
+            "maxQuantityProducts": {
+              "type": "number",
+              "title": "Quantidade máxima de produtos"
+            },
+            "sort": {
+              "title": "Ordenação",
+              "type": "string",
+              "default": "\"\"",
+              "enum": [
+                "\"\"",
+                "discount_desc",
+                "release_desc",
+                "name_asc",
+                "name_desc",
+                "orders_desc",
+                "price_asc",
+                "price_desc"
+              ],
+              "enumNames": [
+                "Relevante",
+                "Descontos",
+                "Mais Recentes",
+                "De A a Z",
+                "De Z a A",
+                "Mais Vendidos",
+                "Maior Preço",
+                "Menor Preço"
+              ]
+            },
+            "collection": {
+              "type": "string",
+              "title": "Coleção",
+              "description": "id coleção"
+            },
+            "term": {
+              "type": "string",
+              "title": "Termo",
+              "description": "Termo"
+            },
+            "hideUnavailableItems": {
+              "default": true,
+              "type": "boolean",
+              "title": "Mostrar produtos indisponíveis"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Seção Produtores",
+    "schema": {
+      "title": "Seção Produtores",
+      "description": "Seção Produtores (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título Seção"
+        },
+        "banners": {
+          "type": "array",
+          "title": "Banners",
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "desktopImage": {
+                "title": "Banner Desktop",
+                "description": "É recomendável que o banner desktop tenha 1440x320px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Banner Mobile",
+                "description": "É recomendável que o banner mobile tenha 330x260px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Alt Banner",
+                "description": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link Banner",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        },
+        "carroselImages": {
+          "type": "array",
+          "title": "Carrosel Imagens",
+          "items": {
+            "type": "object",
+            "title": "Carrosel Imagens",
+            "properties": {
+              "image": {
+                "title": "Imagem",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                },
+                "description": "É recomendável que as imagens tenham 100x100px"
+              },
+              "alt": {
+                "title": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              },
+              "collectionId": {
+                "title": "Id Coleção",
+                "description": "Adicione o id da coleção",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "searchParams": {
+          "type": "object",
+          "title": "Configurações da Prateleira",
+          "properties": {
+            "maxQuantityProducts": {
+              "type": "number",
+              "title": "Quantidade máxima de produtos"
+            },
+            "sort": {
+              "title": "Ordenação",
+              "type": "string",
+              "default": "\"\"",
+              "enum": [
+                "\"\"",
+                "score_desc",
+                "discount_desc",
+                "release_desc",
+                "name_asc",
+                "name_desc",
+                "orders_desc",
+                "price_asc",
+                "price_desc"
+              ],
+              "enumNames": [
+                "Relevante",
+                "Descontos",
+                "Mais Recentes",
+                "De A a Z",
+                "De Z a A",
+                "Mais Vendidos",
+                "Maior Preço",
+                "Menor Preço"
+              ]
+            },
+            "collection": {
+              "type": "string",
+              "title": "Coleção",
+              "description": "Id coleção"
+            },
+            "term": {
+              "type": "string",
+              "title": "Termo"
+            },
+            "hideUnavailableItems": {
+              "default": true,
+              "type": "boolean",
+              "title": "Mostrar produtos indisponíveis"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Seção Países",
+    "schema": {
+      "title": "Seção Países",
+      "description": "Seção Países (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título Seção"
+        },
+        "banners": {
+          "type": "array",
+          "title": "Banners",
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "desktopImage": {
+                "title": "Banner Desktop",
+                "description": "É recomendável que o banner desktop tenha 1440x320px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Banner Mobile",
+                "description": "É recomendável que o banner mobile tenha 330x260px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Alt Banner",
+                "description": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link Banner",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        },
+        "carroselImages": {
+          "type": "array",
+          "title": "Carrosel Imagens",
+          "items": {
+            "type": "object",
+            "title": "Carrosel Imagens",
+            "properties": {
+              "image": {
+                "title": "Imagem",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                },
+                "description": "É recomendável que as imagens tenham 60x60px"
+              },
+              "alt": {
+                "title": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              },
+              "title": {
+                "title": "Título País",
+                "type": "string"
+              },
+              "collectionId": {
+                "title": "Id Coleção",
+                "description": "Adicione o id da coleção",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Lista de Banners",
+    "schema": {
+      "title": "Lista de Banners",
+      "description": "Lista de Banners (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título"
+        },
+        "banners": {
+          "type": "array",
+          "title": "Banners",
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "desktopImage": {
+                "title": "Banner Desktop",
+                "description": "É recomendável que o banner tenha 306x460px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Banner Mobile",
+                "description": "É recomendável que o banner tenha 306x460px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Alt Banner",
+                "description": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link Banner",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Blog",
+    "schema": {
+      "title": "Blog",
+      "description": "Blog (Conteúdo Home)",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título"
+        },
+        "cards": {
+          "type": "array",
+          "title": "Artigos Blog",
+          "items": {
+            "type": "object",
+            "title": "Artigo",
+            "properties": {
+              "image": {
+                "title": "Imagem do Artigo",
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "title": "Imagem",
+                    "description": "É recomendável que os banner desktop tenha 100x100",
+                    "type": "string",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "alt": {
+                    "title": "Alt Banner",
+                    "description": "Alt imagem",
+                    "type": "string"
+                  }
+                }
+              },
+              "content": {
+                "title": "Conteúdo do Artigo",
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "title": "Título",
+                    "type": "string"
+                  },
+                  "description": {
+                    "title": "Descrição",
+                    "type": "string"
+                  }
+                }
+              },
+              "link": {
+                "title": "Link Artigo",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Sobre",
+    "schema": {
+      "title": "Sobre a Adega",
+      "description": "Conteudo da Página Sobre",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título da página"
+        },
+        "titleText": {
+          "type": "string",
+          "title": "Título do texto"
+        },
+        "textOne": {
+          "type": "string",
+          "title": "Conteúdo Parágrafo 1",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        },
+        "youtube": {
+          "type": "string",
+          "title": "Link Embed YouTube"
+        },
+        "textTwo": {
+          "type": "string",
+          "title": "Conteúdo Parágrafo 2",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        },
+        "banner": {
+          "type": "object",
+          "title": "Banner",
+          "properties": {
+            "desktopImage": {
+              "title": "Banner Desktop",
+              "description": "É recomendável que o banner desktop tenha 1086x360px",
+              "type": "string",
+              "widget": {
+                "ui:widget": "image-uploader"
+              }
+            },
+            "mobileImage": {
+              "title": "Banner Mobile",
+              "description": "É recomendável que o banner mobile tenha 330x200px",
+              "type": "string",
+              "widget": {
+                "ui:widget": "image-uploader"
+              }
+            },
+            "alt": {
+              "title": "Alt Banner",
+              "description": "Alt imagem",
+              "type": "string"
+            },
+            "link": {
+              "title": "Link Banner",
+              "description": "Example: https://www.google.com",
+              "type": "string"
+            },
+            "target": {
+              "title": "Abrir link em uma nova aba",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "textThree": {
+          "type": "string",
+          "title": "Conteúdo Parágrafo 3",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Conteúdo Institucional",
+    "schema": {
+      "title": "Conteúdo Institucional",
+      "description": "Conteúdo das páginas institucionais",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título"
+        },
+        "text": {
+          "type": "string",
+          "title": "Conteúdo",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Banners & Texto Seo Categoria",
+    "schema": {
+      "title": "Banners & Texto Seo Categoria",
+      "description": "Texto SEO (Conteúdo categoria)",
+      "type": "object",
+      "properties": {
+        "banners": {
+          "type": "array",
+          "title": "Banners",
+          "items": {
+            "type": "object",
+            "title": "Banner",
+            "properties": {
+              "desktopImage": {
+                "title": "Banner Desktop",
+                "description": "É recomendável que o banner desktop tenha 1440x320px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Banner Mobile",
+                "description": "É recomendável que o banner mobile tenha 330x260px",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Alt Banner",
+                "description": "Alt imagem",
+                "type": "string"
+              },
+              "link": {
+                "title": "Link Banner",
+                "description": "Example: https://www.google.com",
+                "type": "string"
+              },
+              "target": {
+                "title": "Abrir link em uma nova aba",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          }
+        },
+        "textSeo": {
+          "title": "Texto SEO",
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "Título",
+              "type": "string",
+              "description": "Substitui o título padrão da categoria"
+            },
+            "text": {
+              "title": "Texto",
+              "type": "string",
+              "widget": {
+                "ui:widget": "draftjs-rich-text"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "HTML",
+    "schema": {
+      "title": "HTML",
+      "description": "HTML (Conteúdo Landing Page Customizada)",
+      "type": "object",
+      "properties": {
+        "html": {
+          "title": "HTML",
+          "description": "Bloco HTML",
+          "type": "object",
+          "properties": {
+            "html": {
+              "title": "HTML",
+              "description": "Insira tags HTML",
+              "type": "string",
+              "widget": {
+                "ui:widget": "textarea"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

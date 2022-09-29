@@ -1,0 +1,25 @@
+@import "src/styles/scaffold";
+
+.topbar {
+    background: var(--secondary-dark);
+    padding: .25rem 0;
+    width: 100%;
+  
+    &__text {
+        width: 100%;
+
+        color:  var(--primary-darkest);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        text-align: center;
+
+        @include mobile{
+            font-size: .87rem;
+        }
+
+        strong{
+            font-weight: 700;
+        }
+    }
+}

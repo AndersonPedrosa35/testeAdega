@@ -1,0 +1,26 @@
+.order-summary[data-order-summary] {
+  border: 1px solid var(--secondary-medium);
+  padding: 1rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+
+    &.text__title{
+
+      &-subtotal{
+        font-size: .75rem;
+        color: var(--primary-dark);
+        font-weight: 700;
+        line-height: 2rem;
+      }
+
+      &-total{
+        font-size: 1rem;
+        color: var(--primary-dark);
+        font-weight: 700;
+      }
+    }
+  }
+}

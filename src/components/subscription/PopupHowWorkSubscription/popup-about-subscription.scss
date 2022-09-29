@@ -1,0 +1,157 @@
+@import "src/styles/scaffold";
+
+.subscription{
+
+    &__popup{
+
+        &-howWorkSubscription{
+            max-width: 1020px;
+            width: 100%;
+            max-height: 580px;
+            height: auto;
+            background: var(--neutral-lightest);
+            border-radius: 8px;
+            padding: 3.75rem 5rem 3.75rem 6.25rem;
+            box-sizing: border-box;
+            position: absolute;
+            top: calc(50% - (580px / 2));
+            left: calc(50% - (1020px /2));
+            overflow: hidden;
+            border-bottom: 10px solid var(--primary-dark);
+
+            
+            @include mobile {
+                max-width: 90%;
+                left: 5%;
+                padding: 1.5rem;
+                background: #E5E5E5;
+            }
+
+            &::before{
+                content: '';
+                width: 68px;
+                height: 390px;
+                display: flex;
+                background-image: url("data:image/svg+xml,%3Csvg width='69' height='391' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M68.596 107.137A9.863 9.863 0 0 0 58.747 117h9.85v-9.863ZM47.878 107.137V117h9.849a9.863 9.863 0 0 0-9.849-9.863M47.878 106.116a9.846 9.846 0 0 0 6.964-2.886 9.855 9.855 0 0 0 2.885-6.967h-9.849v9.853ZM68.597 106.116v-9.853h-9.849a9.855 9.855 0 0 0 2.885 6.967 9.846 9.846 0 0 0 6.964 2.886' fill='%23C4C6C8'/%3E%3Cpath d='M1.427 48.133c0-26.15 20.537-47.355 45.952-47.63v95.26C21.964 95.486 1.427 74.28 1.427 48.132Z' stroke='%23A78344'/%3E%3Cpath d='M54 227.679A11.321 11.321 0 0 0 42.68 239H54v-11.321ZM30 227.679V239h11.32a11.317 11.317 0 0 0-6.988-10.459 11.32 11.32 0 0 0-4.332-.862M30 226.321A11.32 11.32 0 0 0 41.32 215H30v11.321ZM54 226.321V215H42.68A11.322 11.322 0 0 0 54 226.321' fill='%2372537D'/%3E%3Cpath d='M46 378.264A12.737 12.737 0 0 0 33.264 391H46v-12.736ZM19 378.264V391h12.736A12.739 12.739 0 0 0 19 378.264M19 376.736A12.737 12.737 0 0 0 31.736 364H19v12.736ZM46 376.736V364H33.264A12.737 12.737 0 0 0 46 376.736' fill='%23F2F2F2'/%3E%3C/svg%3E");
+                position: absolute;
+                left: 1rem;
+                top: 2rem;
+
+                @include mobile {
+                    width: 34px;
+                    height: 60px;
+                    background-size: 34px 60px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='34' height='59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 53.83a4.952 4.952 0 0 0-4.948 4.955H34V53.83ZM23.59 53.83v4.955h4.949a4.956 4.956 0 0 0-4.949-4.955ZM23.59 53.316a4.947 4.947 0 0 0 4.95-4.95h-4.95v4.95ZM34 53.316v-4.95h-4.948a4.951 4.951 0 0 0 4.949 4.95Z' fill='%23C4C6C8'/%3E%3Cpath d='M.5 24.184C.5 11.263 10.58.778 23.09.505v47.357C10.58 47.589.5 37.105.5 24.184Z' stroke='%23A78344'/%3E%3C/svg%3E");
+                    top: 1.5rem;
+                    left: .6rem;
+                }
+            }
+
+            &::after{
+                @include mobile {
+                    content: '';
+                    width: 27px;
+                    height: 127px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='27' height='127' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.569 8.753a7.816 7.816 0 0 0-7.816 7.816h7.816V8.753ZM0 8.753v7.816h7.815A7.815 7.815 0 0 0 0 8.753ZM0 7.816A7.816 7.816 0 0 0 7.815 0H0v7.816ZM16.569 7.816V0H8.753a7.816 7.816 0 0 0 7.816 7.816Z' fill='%2372537D'/%3E%3Cpath d='M27 114.264A12.737 12.737 0 0 0 14.264 127H27v-12.736ZM0 114.264V127h12.736A12.739 12.739 0 0 0 0 114.264ZM0 112.736A12.737 12.737 0 0 0 12.736 100H0v12.736ZM27 112.736V100H14.264A12.737 12.737 0 0 0 27 112.736Z' fill='%23F2F2F2'/%3E%3C/svg%3E");
+                    background-size: 27px 127px;
+                    background-color: transparent;
+                    display: flex;
+                    position: absolute;
+                    right: .5rem;
+                    top: 105px;
+                }
+            }
+
+            &-close{
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                transition: all 300ms;
+
+                &:hover{
+                    opacity: .6;
+                }
+            }
+
+            &-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 3.75rem;
+            }
+
+            &-text{
+                overflow-y: scroll;
+                max-height: 440px;
+                z-index: 1;
+
+                @include mobile {
+                    overflow: initial;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: var(--neutral-lightest);
+                    border-radius: 6px;
+                    border: 5px solid var(--neutral-lightest);
+            
+                    &-thumb {
+                      width: 6px;
+                      border-radius: 6px;
+                      background: var(--primary-dark);
+                    }
+                  }
+
+                h2{
+                    color: var(--primary-darkest);
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-bottom: 1.5rem;
+
+                    @include mobile {
+                        text-align: center;
+                        width: 237px;
+                        margin: 0 auto  1.5rem;
+                    }
+                }
+
+                p{
+                    margin-bottom: 1.5rem;
+                    font-size: 1.125rem;
+                    color: var(--neutral-dark);
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    @include mobile {
+                        line-height: 1.5rem;
+                        margin-bottom: 2.25rem;
+                    }
+                }
+
+                & > div {
+                    margin-right: .5rem;
+
+                    @include mobile {
+                        overflow: scroll;
+                        max-height: 330px;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &-image{
+                min-width: 324px;
+                height: 370px;
+                background: url('../../../assets/popup//popupSubscription.png');
+                display: flex;
+                align-items: center;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

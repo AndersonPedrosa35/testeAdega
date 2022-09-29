@@ -1,0 +1,38 @@
+@import "src/styles/scaffold";
+
+.collection__seo{
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.03);
+
+    @include mobile{
+        box-shadow: none;
+    }
+
+    .breadcrumb{
+        margin-bottom: 0;
+        box-shadow: none;
+
+        @include mobile{
+            border-bottom: 1px solid #E5E5E5;
+        }
+    }
+
+    &-banner{
+        @include mobile{
+            padding-top: 1.125rem;
+        }
+        
+        img{
+            width: 100%;
+            border-radius: .4rem;
+        }
+    }
+
+    &-text{
+        padding-bottom: 2rem;
+        
+        @include mobile{
+            padding-bottom: 1.125rem;
+            box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.03);
+        }
+    }
+}

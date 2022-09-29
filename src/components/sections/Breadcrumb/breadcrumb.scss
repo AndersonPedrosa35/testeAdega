@@ -1,0 +1,59 @@
+@import "src/styles/scaffold";
+
+.breadcrumb {
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.03);
+  width: 100%;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--neutral-dark);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    a{
+      color: var(--primary-dark);
+    }
+
+    &:first-child{
+      a{
+        color: var(--neutral-dark);
+      }
+    }
+
+    &:last-child {
+      font-weight: 700;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    a{
+      transition: all 300ms;
+      &:hover{
+        opacity: .5;
+      }
+    }
+
+    @include mobile {
+      font-weight: 300;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: 0px 10px;
+    min-width: 10px;
+  }
+}

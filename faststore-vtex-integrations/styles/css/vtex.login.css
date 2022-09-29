@@ -1,0 +1,82 @@
+.content{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.formTitle,
+.forgotPasswordLink,
+.inputContainer :global(.vtex-styleguide-9-x-input),
+.sendButton :global(.vtex-button__label),
+.dontHaveAccount,
+.button :global(.vtex-button__label),
+.backButton :global(.vtex-button){
+  font-family: Arial, 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+.forgotPasswordLink,
+.dontHaveAccount{
+  color: #4f285d;
+}
+
+
+.sendButton :global(.vtex-button){
+  font-family: Arial, 'Helvetica', sans-serif;
+  border: 0;
+  background: #4f285d;
+  box-shadow: none;
+  border-radius: 3px;
+  height: 50px;
+}
+
+.sendButton :global(.vtex-button_label){
+  color: #fff;
+}
+
+.button :global(.vtex-button){
+  border: 1px solid #4f285d;
+  border-radius: 3px;
+  height: 50px;
+  transition: all 300ms;
+  background: #fff;
+  color: #4f285d;
+}
+
+
+.button :global(.vtex-button__label){
+  font-size: 0.875rem;
+}
+
+.button :global(.vtex-button):hover{
+  background-color: #fff;
+  opacity: .6;
+}
+
+.button :global(.vtex-button__label){
+  color: #4f285d;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+
+.backButton :global(.vtex-button){
+  color: #4f285d;
+  transition: all 300ms;
+}
+
+.backButton :global(.vtex-button):hover{
+  background: #fff;
+  opacity: .6;
+}
+
+
+@media screen and (max-width: 64rem){
+  .contentForm{
+    width: 100%;
+    padding: 0;
+  }
+
+  .loginOptionsContainer{
+    width: 100%;
+  }
+}

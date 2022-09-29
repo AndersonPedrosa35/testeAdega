@@ -1,0 +1,128 @@
+@import "src/styles/scaffold";
+@import "src/styles/global/carrousel";
+@import "src/styles/libs/slick-slide";
+
+.home {
+  
+  &__section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    img{
+      width: 100%;
+    }
+
+    &-fullbanner {
+      max-width: 100%;
+      margin-bottom: 2rem;
+
+      @include mobile {
+        margin-bottom: 1rem;
+
+        &:nth-of-type(1){
+          margin-top: 1rem;
+        }
+      }
+
+      img {
+        border-radius: 0.4rem;
+        width: 100%;
+      }
+    }
+
+    &-tipbar {
+      margin-bottom: 1.25rem;
+
+      @include mobile {
+        .tipbar__inner {
+          border-bottom: 1px solid #e5e5e5;
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    &-box-banners {
+      margin-bottom: 2rem;
+      max-width: 100%;
+      overflow: hidden;
+
+      @include mobile {
+        padding: 1rem 0;
+      }
+
+      .title {
+        margin-bottom: 2rem;
+        line-height: 1.2;
+
+        @include mobile {
+          margin-bottom: 1rem;
+        }
+      }
+
+      picture img {
+        margin-bottom: 1rem;
+      }
+
+      .carousel-box {
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
+    &-list-banners{
+      width: 100%;
+    }
+
+    &-blog{
+      padding: 2rem 0;
+      background: var(--neutral-light);
+    }
+
+    &-brands{
+      .carousel-box{
+        margin-bottom: 2rem;
+        
+        @include mobile {
+          img{
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      .shelf{
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-countries{
+      .carousel-box{
+        @include mobile {
+          img{
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+
+    &-shelf{
+
+      .shelf{
+        margin-bottom: 2rem;
+      }
+
+      &.one, &.two, &.three{
+        .shelf{
+          @include mobile{
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

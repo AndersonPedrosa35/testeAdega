@@ -1,0 +1,169 @@
+@import "src/styles/scaffold";
+
+.header {
+  background: var(--primary-darkest);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop{
+    height: 100%;
+    max-height: 140px;
+  }
+
+  & > .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background: var(--primary-darkest);
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .logo{
+    margin-right: 4.625rem;
+    flex: initial;
+
+    @include mobile{
+      margin-right: 0;
+      flex: 1;
+    }
+  }
+
+  .button{
+    &-icon{
+      transition: opacity .3s;
+
+      span{
+        color: var(--neutral-lightest);
+        display: flex;
+        font-size: .75rem;
+        font-weight: 700;
+        gap: 0.5rem;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      &:hover{
+        opacity: .6;
+      }
+    }
+
+    &-login{
+      margin-left: 2rem;
+      min-width: 152px;
+
+      @include mobile {
+        min-width: initial;
+      }
+    }
+
+    &-wishlist{
+      margin-left: 2rem;
+
+      @include mobile {
+        margin-left: 1.5rem;
+
+        svg{
+            width: 32px;
+            height: 32px;
+            stroke: var(--neutral-lightest);
+        }
+      }
+    }
+
+    &-cart{
+      position: relative;
+      margin-left: 2.375rem;
+      cursor: pointer;
+      transition: opacity .3s;
+
+      &:hover{
+        opacity: .6;
+      }
+      
+      &::after {
+        content: attr(data-items);
+        position: absolute;
+        color:  var( --neutral-lightest);
+        background: var(--secondary-darkest);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        right: -11px;
+        top: -11px;
+        font-size: .87rem;
+    
+        @include mobile{
+          right: -6px;
+          top: -6px;
+          border: 1px solid var(--primary-darkest);
+        }
+      }
+
+      @include mobile{
+        margin-left: 1.5rem;
+
+        svg{
+            width: 32px;
+            height: 32px;
+        }
+      }
+    }
+
+    &-menu{
+      margin-right: 1.5rem;
+    }
+
+    &-search{
+      @include mobile {
+        i{
+          &.icon__close{
+            svg{
+              width: 28px;
+              height: 28px;
+            }
+          }
+        }
+
+        [data-store-overlay="true"]{
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          left: 0;
+          background: rgba(0,0,0,.5);
+          top: 80px;
+          visibility: hidden; 
+          animation-name: showOverlaySearch;
+          animation-duration: .3s;  
+          animation-delay: 1s;
+          animation-fill-mode: forwards;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes showOverlaySearch {
+  from { visibility: hidden; }
+  to { visibility: visible;}
+}
+  

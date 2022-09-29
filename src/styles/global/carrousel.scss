@@ -1,0 +1,93 @@
+[data-carousel-track-container] {
+  border-radius: 4px;
+}
+
+[data-store-carousel] {
+  position: relative;
+}
+
+[data-store-carousel] [data-carousel-controls] [data-store-button] {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-lightest);
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+
+[data-store-carousel]
+  [data-carousel-controls]
+  [data-store-button]
+  [data-store-icon]
+  svg {
+  display: none;
+}
+
+[data-store-carousel]
+  [data-carousel-controls]
+  [data-store-button]
+  [data-store-icon]::before {
+  content: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1L1 6L6 11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+[data-store-carousel]
+  [data-carousel-controls]
+  [data-arrow="right"]
+  [data-store-icon]::before {
+  transform: translate(1px, -1px) rotate(180deg);
+  transform-origin: center;
+  display: block;
+}
+
+[data-store-carousel]
+  [data-carousel-controls]
+  [data-arrow="left"]
+  [data-store-icon]::before {
+  transform: translate(-1px, -1px);
+  display: block;
+  margin-top: 6px;
+}
+
+[data-store-carousel] [data-arrow="left"] {
+  left: 1rem;
+}
+
+[data-store-carousel] [data-arrow="right"] {
+  right: 1rem;
+}
+
+[data-store-carousel] [data-carousel-bullets] {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+[data-store-carousel] [data-carousel-bullets] [data-store-bullets] {
+  display: flex;
+}
+
+[data-store-carousel] [data-bullet-item] {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  padding: 0;
+  box-shadow: 0px 0px 0px 1px var(--primary-dark);
+  transition: all 0.3s ease;
+}
+
+[data-store-carousel] [data-bullet-item]:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+[data-store-carousel] [data-bullet-item][aria-selected="true"] {
+  background: var(--secondary-dark);
+  box-shadow: 0px 0px 0px 1px var(--secondary-dark);
+}

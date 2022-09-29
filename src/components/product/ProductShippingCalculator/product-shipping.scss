@@ -1,0 +1,152 @@
+@import "src/styles/scaffold";
+
+.shippingCalculator {
+  border: 1px solid #e5e5e5;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+
+  #loading {
+    width: 30px;
+    height: 30px;
+    border: 4px solid var(--primary-darkest);
+  }
+
+  .error {
+    font-size: 0.87rem;
+    color: red;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__collapsible {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &--open {
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__form {
+    background: var(--neutral-light);
+    position: relative;
+    padding: 0 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    background: transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--primary-dark);
+    line-height: 120%;
+    width: 100%;
+    height: 3rem;
+    border: none;
+  }
+
+  &__submit {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-dark);
+    top: 50%;
+    right: 0;
+
+    &:hover {
+      color: var(--primary-darkest);
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8c9197;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &--item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e5e5e5;
+
+      &:first-child {
+        border-top: 1px solid #e5e5e5;
+        margin-top: 1rem;
+      }
+
+      span{
+          width: calc(100%/3);
+      }
+    }
+
+    &--name {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--neutral-dark);
+    }
+
+    &--eta {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--neutral-dark);
+      text-align: center;
+    }
+
+    &--price {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--secondary-dark);
+      text-align: right;
+    }
+  }
+
+  &__icon {
+    transform-origin: center;
+    transition: all 0.3s ease;
+
+    &--wrapper {
+      padding-left: 1rem;
+      border-left: 1px solid var(--neutral-medium);
+    }
+
+    &.shippingCalculator__icon--active {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+}

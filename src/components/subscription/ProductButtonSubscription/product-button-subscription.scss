@@ -1,0 +1,47 @@
+
+.subscription{
+
+    &__buttons{
+        padding: .5rem 0 0;
+
+        &-popupSubscribe{
+            width: 100%;
+            border: 1px solid var(--primary-darkest);
+            border-radius: 4px;
+            height: 48px;
+            font-size: 1rem;
+            color:  var(--primary-darkest);
+            font-weight: 700;
+            transition: all 500ms;
+
+            &:hover{
+                background: var(--primary-darkest);
+                color: var(--neutral-lightest);
+            }
+        }
+
+        &-popupAboutSubscription{
+            margin: 1rem 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            color: var(--primary-darkest);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 300ms;
+
+            &:hover{
+                text-decoration: underline;
+                i { transform: scale(1.2); }
+            }
+
+            i {
+                display: flex;
+                align-items: center;
+                transition: all 300ms;
+            }
+        }
+    }
+}

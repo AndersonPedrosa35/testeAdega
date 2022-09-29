@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, 'Helvetica', sans-serif;
+
+    --primary-darkest: #4f285d;
+    --primary-dark: #72537d;
+    --primary-medium: #957e9e;
+    --primary-light: #b9a9be;
+    --primary-lightest: #dcd4df;
+
+    --secondary-darkest: #b0bf3c;
+    --secondary-dark: #c0cc63;
+    --secondary-medium: #d0d98a;
+    --secondary-light: #dfe5b1;
+    --secondary-lightest: #eff2d8;
+
+    --waiting-darkest: #b5912b;
+    --waiting-dark: #dac34f;
+    --waiting-medium: #ffea7d;
+    --waiting-light: #ffff9e;
+    --waiting-lightest: #ffffd8;
+
+    --approved-darkest: #006600;
+    --approved-dark: #008f00;
+    --approved-medium: #16aa09;
+    --approved-light: #73d260;
+    --approved-lightest: #daf4cd;
+
+    --warning-darkest: #970d0d;
+    --warning-dark: #c61010;
+    --warning-medium: #e63737;
+    --warning-light: #ef8080;
+    --warning-lightest: #f6cbcb;
+
+    --neutral-darkest: #101820;
+    --neutral-dark: #40464d;
+    --neutral-medium: #c4c6c8;
+    --neutral-light: #f2f2f2;
+    --neutral-lightest: #ffffff;
+
+    --gray: #8C9197;
+}

@@ -1,0 +1,23 @@
+
+@import './../scaffold.scss';
+
+.landing-collection{
+
+    .product-grid-module--fs-product-grid--ORg65{
+        grid-template-columns: repeat(5, 1fr);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .product-gallery__main{
+        padding-bottom: 2rem;
+    }
+
+    .product-gallery__filters{
+        @include mobile {
+            background: #E5E5E5;
+        }
+    }
+}

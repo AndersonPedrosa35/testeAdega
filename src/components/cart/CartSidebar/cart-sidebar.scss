@@ -1,0 +1,134 @@
+.cart-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+
+  &.fs-slide-over{
+    &[data-fs-slide-over-size=partial]{
+      max-width: 364px;
+    }  
+  }
+
+  [data-store-button]{
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover{
+      opacity: .5;
+    }
+  }
+
+
+  > header {
+    padding: 1rem;
+
+    > [data-store-icon-button] {
+      &:last-of-type {
+        margin-right: calc(-1 * var(--fs-spacing-1));
+      }
+    }
+  }
+
+  .icon__close{
+    display: inline-block;
+
+    &:hover{
+      opacity: .5;
+    }
+
+    svg{
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+
+  .cart-sidebar__title {
+
+    p {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+    }
+  }
+
+  > [data-store-list] {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    overflow: auto;
+    padding: 0 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-dark) transparent;
+
+    &::-webkit-scrollbar {
+      background-color: var(--neutral-lightest);
+      border-radius: 16px;
+      border: 5px solid var(--neutral-lightest);
+      width: 8px;
+      appearance: none;
+
+      &-thumb{
+        border-radius: 8px;
+        background: var(--primary-dark);
+      }
+    }
+
+    &::-moz-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  > footer {
+    margin-top: auto;
+    background-color: var(--fs-color-neutral-0);
+    box-shadow: 0 0 6px rgb(0 0 0 / 20%);
+
+    [data-store-button] {
+      align-items: center;
+      background: var(--primary-dark);
+      border: 0;
+      border-radius: 4px;
+      color: var(--neutral-lightest);
+      cursor: pointer;
+      display: flex;
+      filter: drop-shadow(0 4px 4px rgba(0,0,0,.25));
+      font-weight: 500;
+      justify-content: center;
+      margin-top: 0.5rem;
+      transition: all .3s;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  [data-fs-empty-state]{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    height: 80%;
+
+    p{
+      color: var(--primary-dark);
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      max-width: 275px;
+      text-align: center;
+    }
+
+    span{
+      color: var(--neutral-dark);
+      font-size: .75rem;
+      font-weight: 500;
+      line-height: 1.125rem;
+      display: inline-block;
+      max-width: 225px;
+      text-align: center;
+    }
+  }
+
+}

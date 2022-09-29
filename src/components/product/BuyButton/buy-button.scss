@@ -1,0 +1,64 @@
+.button {
+  &__add-to-cart {
+    width: 100%;
+    height: 40px;
+    background: var(--primary-dark);
+    color: var(--neutral-lightest);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+
+  &__quantity {
+    background: #eff2d8;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    color: var(--primary-dark);
+    font-weight: 500;
+    font-size: 0.87rem;
+    padding: 0 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: "Adicionado";
+      position: absolute;
+      bottom: -26px;
+      width: calc(100% - 2rem);
+      color: var(--secondary-darkest);
+      text-align: center;
+    }
+
+    i {
+      cursor: pointer;
+
+      transition: all 300ms;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.box {
+  &--unavailable {
+    width: 100%;
+    height: 40px;
+    background: var(--neutral-medium);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+  }
+}

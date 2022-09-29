@@ -1,0 +1,74 @@
+@import "src/styles/scaffold";
+
+[data-fs-toast] {
+  left: calc(50% - (344px / 2));
+  position: fixed;
+  top: 0;
+  z-index: 0;
+
+  &[data-fs-toast-state="in"] {
+    animation: motion-in .2s normal forwards ease-in-out;
+  }
+
+  &[data-fs-toast-state="out"] {
+    animation: motion-out .2s normal forwards ease-in-out;
+  }
+
+  @include mobile{
+    left: 10%;
+    right: 10%;
+  }
+}
+
+[data-fs-toast-content] {
+  display: block;
+  overflow: hidden;
+  max-width: 344px;
+  width: 344px;
+  background: var(--approved-lightest);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  @include mobile{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+[data-fs-toast-message] {
+  overflow: hidden;
+  font-size: 14px;  
+  color: var(--primary-dark);
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  padding: .75rem 2rem;
+}
+
+@keyframes motion-in {
+  from {
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  to {
+    z-index: 9;
+    opacity: 1;
+    transform: translateY(40%);
+  }
+}
+
+@keyframes motion-out {
+  from {
+    z-index: 9;
+    opacity: 1;
+    transform: translateY(40%);
+  }
+
+  to {
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
