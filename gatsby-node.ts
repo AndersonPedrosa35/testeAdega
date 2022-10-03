@@ -225,20 +225,20 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   createRedirect({
     fromPath: '/sitemap.xml',
-    toPath: 'https://adegamarche.myvtex.com/sitemap.xml',
+    toPath: 'https://adegamarchehlg.myvtex.com/sitemap.xml',
     statusCode: 200,
     proxyHeaders: {
-      'x-forwarded-host': 'www.adegamarche.com.br',
+      'x-forwarded-host': 'www.adegamarchehlg.com.br',
       via: "''",
     }
   })
 
   createRedirect({
     fromPath: '/sitemap/product-0.xml',
-    toPath: 'https://adegamarche.myvtex.com/sitemap/product-0.xml',
+    toPath: 'https://adegamarchehlg.myvtex.com/sitemap/product-0.xml',
     statusCode: 200,
     proxyHeaders: {
-      'x-forwarded-host': 'www.adegamarche.com.br',
+      'x-forwarded-host': 'www.adegamarchehlg.com.br',
       via: "''",
     }
   })
