@@ -109,56 +109,56 @@ function Page(props: Props) {
   );
 }
 
-// export const querySSG = graphql`
-//   query CollectionPageQuery($slug: String) {
-//     site {
-//       siteMetadata {
-//         titleTemplate
-//         title
-//         description
-//       }
-//     }
+export const querySSG = graphql`
+  query CollectionPageQuery($slug: String) {
+    site {
+      siteMetadata {
+        titleTemplate
+        title
+        description
+      }
+    }
 
-//     cmsCategory(infoPage: {siteMetadataWithSlug: {seo: {slug: {eq: $slug}}}}) {
-//       sections {
-//         data
-//         name
-//       }
-//       infoPage {
-//         siteMetadataWithSlug {
-//           seo {
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+    cmsCategory(infoPage: {siteMetadataWithSlug: {seo: {slug: {eq: $slug}}}}) {
+      sections {
+        data
+        name
+      }
+      infoPage {
+        siteMetadataWithSlug {
+          seo {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
 
-// export const querySSR = gql`
-//   query ServerCollectionPageQuery($slug: String!) {
-//     collection(slug: $slug) {
-//       slug
-//       seo {
-//         title
-//         description
-//       }
-//       breadcrumbList {
-//         itemListElement {
-//           item
-//           name
-//           position
-//         }
-//       }
-//       meta {
-//         selectedFacets {
-//           key
-//           value
-//         }
-//       }
-//     }
-//   }
-// `;
+export const querySSR = gql`
+  query ServerCollectionPageQuery($slug: String!) {
+    collection(slug: $slug) {
+      slug
+      seo {
+        title
+        description
+      }
+      breadcrumbList {
+        itemListElement {
+          item
+          name
+          position
+        }
+      }
+      meta {
+        selectedFacets {
+          key
+          value
+        }
+      }
+    }
+  }
+`;
 
 export const getServerData = async ({
   params: { slug },

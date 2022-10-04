@@ -60,24 +60,24 @@ function Page(props: Props) {
   )
 }
 
-// export const querySSG = graphql`
-//   query LandingPageCustom($id: String) {
-//     cmsLandingPageCustom(id: {eq: $id}) {
-//         id
-//         sections {
-//           data
-//           name
-//         }
-//         seo {
-//           siteMetadataWithSlug {
-//             description
-//             slug
-//             title
-//           }
-//         }
-//       }
-//   }
-// `
+export const querySSG = graphql`
+  query LandingPageCustom($id: String) {
+    cmsLandingPageCustom(id: {eq: $id}) {
+        id
+        sections {
+          data
+          name
+        }
+        seo {
+          siteMetadataWithSlug {
+            description
+            slug
+            title
+          }
+        }
+      }
+  }
+`
 
 Page.displayName = 'Page'
 export default mark(Page)

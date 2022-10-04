@@ -83,35 +83,35 @@ function Page(props: Props) {
   );
 }
 
-// export const querySSG = graphql`
-//   query LandingCmsCollection($slug: String) {
-//     cmsCollection(
-//       infoPage: { siteMetadataWithSlug: { seo: { slug: { eq: $slug } } } }
-//     ) {
-//       infoPage {
-//         siteMetadataWithSlug {
-//           configCollection {
-//             collection
-//             hideUnavailableItems
-//             maxQuantityProducts
-//             sort
-//             rangePrice
-//           }
-//           seo {
-//             description
-//             slug
-//             title
-//           }
-//         }
-//       }
+export const querySSG = graphql`
+  query LandingCmsCollection($slug: String) {
+    cmsCollection(
+      infoPage: { siteMetadataWithSlug: { seo: { slug: { eq: $slug } } } }
+    ) {
+      infoPage {
+        siteMetadataWithSlug {
+          configCollection {
+            collection
+            hideUnavailableItems
+            maxQuantityProducts
+            sort
+            rangePrice
+          }
+          seo {
+            description
+            slug
+            title
+          }
+        }
+      }
 
-//       sections {
-//         data
-//         name
-//       }
-//     }
-//   }
-// `;
+      sections {
+        data
+        name
+      }
+    }
+  }
+`;
 
 Page.displayName = "Page";
 export default mark(Page);

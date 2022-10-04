@@ -111,24 +111,24 @@ function Page(props: Props) {
   )
 }
 
-// export const querySSG = graphql`
-//   query InstitutionalAboutUs($id: String) {
-//     cmsInstitutionalPage(id: { eq: $id }) {
-//       seo {
-//         siteMetadataWithSlug {
-//           description
-//           title
-//           slug
-//         }
-//       }
+export const querySSG = graphql`
+  query InstitutionalAboutUs($id: String) {
+    cmsInstitutionalPage(id: { eq: $id }) {
+      seo {
+        siteMetadataWithSlug {
+          description
+          title
+          slug
+        }
+      }
 
-//       sections {
-//         data
-//         name
-//       }
-//     }
-//   }
-// `
+      sections {
+        data
+        name
+      }
+    }
+  }
+`
 
 Page.displayName = 'Page'
 export default mark(Page)
