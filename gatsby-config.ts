@@ -21,73 +21,73 @@ const gatsbyConfig: GatsbyConfig = {
     PARALLEL_SOURCING: true,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-          {
-            allSitePage (filter: {componentChunkName: {ne: "component---src-pages-landing-page-collection-fixed-tsx"}}){
-              nodes {
-                path
-              }
-            }
+    // {
+    //   resolve: `gatsby-plugin-sitemap`,
+    //   options: {
+    //     query: `
+    //       {
+    //         allSitePage (filter: {componentChunkName: {ne: "component---src-pages-landing-page-collection-fixed-tsx"}}){
+    //           nodes {
+    //             path
+    //           }
+    //         }
 
-            allCmsCollection{
-              nodes {
-                infoPage {
-                  siteMetadataWithSlug {
-                    seo {
-                      slug
-                    }
-                  }
-                }
-              }
-            }
+    //         allCmsCollection{
+    //           nodes {
+    //             infoPage {
+    //               siteMetadataWithSlug {
+    //                 seo {
+    //                   slug
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         }
             
-          }
-        `,
-          resolveSiteUrl: () => config.storeUrl,
-          resolvePages: ({
-            allSitePage: { nodes: allPages },
-            allCmsCollection: { nodes: allCmsCollection }
-          }: any) => {
-            let exclude = [
-              '/[...slug]/',
-              '/[slug]/p/',
-              '/500.html',
-              '/institutional/about-us/',
-              '/institutional/politics/',
-              '/500/',
-              '/',
-              '/landing-page-collection/',
-              '/landing-page-collection-fixed/',
-              '/landing-page-custom/',
-              '/account/',
-              '/wishlist/',
-              '/login/',
-              '/checkout/',
-              '/s/'
-            ]
+    //       }
+    //     `,
+    //       resolveSiteUrl: () => config.storeUrl,
+    //       resolvePages: ({
+    //         allSitePage: { nodes: allPages },
+    //         allCmsCollection: { nodes: allCmsCollection }
+    //       }: any) => {
+    //         let exclude = [
+    //           '/[...slug]/',
+    //           '/[slug]/p/',
+    //           '/500.html',
+    //           '/institutional/about-us/',
+    //           '/institutional/politics/',
+    //           '/500/',
+    //           '/',
+    //           '/landing-page-collection/',
+    //           '/landing-page-collection-fixed/',
+    //           '/landing-page-custom/',
+    //           '/account/',
+    //           '/wishlist/',
+    //           '/login/',
+    //           '/checkout/',
+    //           '/s/'
+    //         ]
 
-            const collectionsPageExclude = allCmsCollection.map((page: any) => {
-              return page.infoPage.siteMetadataWithSlug.seo.slug
-            })    
+    //         const collectionsPageExclude = allCmsCollection.map((page: any) => {
+    //           return page.infoPage.siteMetadataWithSlug.seo.slug
+    //         })    
 
-            exclude.push(...collectionsPageExclude)
+    //         exclude.push(...collectionsPageExclude)
             
-            return allPages.map((page: any) => {
-              return { ...page }
-            }).filter((page: any) => {
-              return !exclude.includes(page.path)
-            })
-          },
-          serialize: ({ path }: any) => {
-            return {
-              url: path,
-            }
-          },
-      },
-    },
+    //         return allPages.map((page: any) => {
+    //           return { ...page }
+    //         }).filter((page: any) => {
+    //           return !exclude.includes(page.path)
+    //         })
+    //       },
+    //       serialize: ({ path }: any) => {
+    //         return {
+    //           url: path,
+    //         }
+    //       },
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-sass',
       options: {

@@ -110,39 +110,39 @@ function Page({ data, location: { pathname, host }} : Props) {
   )
 }
 
-export const query = graphql`
-  query InstitutionalPolitics($slug: String) {
-    allCmsPoliticsPage {
-      nodes {
-        seo {
-          siteMetadataWithSlug {
-            slug
-          }
-        }
-        sections {
-          data
-        }
-      }
-    }
+// export const query = graphql`
+//   query InstitutionalPolitics($slug: String) {
+//     allCmsPoliticsPage {
+//       nodes {
+//         seo {
+//           siteMetadataWithSlug {
+//             slug
+//           }
+//         }
+//         sections {
+//           data
+//         }
+//       }
+//     }
 
-    cmsPoliticsPage(seo: { siteMetadataWithSlug: { slug: { eq: $slug } } }) {
-      menuLateral {
-        menuLateral {
-          title
-        }
-      }
-      sections {
-        data
-      }
-      seo {
-        siteMetadataWithSlug {
-          title
-          description
-          slug
-        }
-      }
-    }
-  }
-`
+//     cmsPoliticsPage(seo: { siteMetadataWithSlug: { slug: { eq: $slug } } }) {
+//       menuLateral {
+//         menuLateral {
+//           title
+//         }
+//       }
+//       sections {
+//         data
+//       }
+//       seo {
+//         siteMetadataWithSlug {
+//           title
+//           description
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Page

@@ -67,118 +67,119 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 
 export const createPages: GatsbyNode["createPages"] = async ({
   actions,
-  graphql,
+  // graphql,
 }) => {
   const { createPage, createRedirect } = actions;
+  const result = ''
+  // const result: any = await graphql(`
+  //   query {
+  //     allCmsInstitutionalPage {
+  //       nodes {
+  //         id
+  //         seo {
+  //           siteMetadataWithSlug {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
 
-  const result: any = await graphql(`
-    query {
-      allCmsInstitutionalPage {
-        nodes {
-          id
-          seo {
-            siteMetadataWithSlug {
-              slug
-            }
-          }
-        }
-      }
+  //     allCmsPoliticsPage {
+  //       nodes {
+  //         id
+  //         seo {
+  //           siteMetadataWithSlug {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
 
-      allCmsPoliticsPage {
-        nodes {
-          id
-          seo {
-            siteMetadataWithSlug {
-              slug
-            }
-          }
-        }
-      }
+  //     allCmsLandingPageCustom {
+  //       nodes {
+  //         id
+  //         seo {
+  //           siteMetadataWithSlug {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
 
-      allCmsLandingPageCustom {
-        nodes {
-          id
-          seo {
-            siteMetadataWithSlug {
-              slug
-            }
-          }
-        }
-      }
+  //     allCmsCollection {
+  //       nodes {
+  //         infoPage {
+  //           siteMetadataWithSlug {
+  //             seo {
+  //               slug
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
 
-      allCmsCollection {
-        nodes {
-          infoPage {
-            siteMetadataWithSlug {
-              seo {
-                slug
-              }
-            }
-          }
-        }
-      }
+  //     allCmsHome {
+  //       nodes {
+  //         sections {
+  //           data
+  //           name
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
-      allCmsHome {
-        nodes {
-          sections {
-            data
-            name
-          }
-        }
-      }
-    }
-  `);
+  // result?.data?.allCmsInstitutionalPage?.nodes?.forEach(({ seo, id }: any) => {
+  //   const { slug } = seo.siteMetadataWithSlug;
 
-  result?.data?.allCmsInstitutionalPage?.nodes?.forEach(({ seo, id }: any) => {
-    const { slug } = seo.siteMetadataWithSlug;
+  //   createPage({
+  //     path: `${slug}`,
+  //     component: path.resolve(`./src/pages/institutional/about-us.tsx`),
+  //     context: {
+  //       id,
+  //       slug,
+  //     },
+  //   });
+  // });
 
-    createPage({
-      path: `${slug}`,
-      component: path.resolve(`./src/pages/institutional/about-us.tsx`),
-      context: {
-        id,
-        slug,
-      },
-    });
-  });
+  // result?.data?.allCmsPoliticsPage?.nodes?.forEach(({ seo, id }: any) => {
+  //   const { slug } = seo.siteMetadataWithSlug;
 
-  result?.data?.allCmsPoliticsPage?.nodes?.forEach(({ seo, id }: any) => {
-    const { slug } = seo.siteMetadataWithSlug;
+  //   createPage({
+  //     path: `${slug}`,
+  //     component: path.resolve(`./src/pages/institutional/politics.tsx`),
+  //     context: {
+  //       id,
+  //       slug,
+  //     },
+  //   });
+  // });
 
-    createPage({
-      path: `${slug}`,
-      component: path.resolve(`./src/pages/institutional/politics.tsx`),
-      context: {
-        id,
-        slug,
-      },
-    });
-  });
+  // result?.data?.allCmsLandingPageCustom?.nodes?.forEach(({ seo, id }: any) => {
+  //   const { slug } = seo.siteMetadataWithSlug;
 
-  result?.data?.allCmsLandingPageCustom?.nodes?.forEach(({ seo, id }: any) => {
-    const { slug } = seo.siteMetadataWithSlug;
+  //   createPage({
+  //     path: `${slug}`,
+  //     component: path.resolve(`./src/pages/landing-page-custom.tsx`),
+  //     context: {
+  //       id,
+  //       slug,
+  //     },
+  //   });
+  // });
 
-    createPage({
-      path: `${slug}`,
-      component: path.resolve(`./src/pages/landing-page-custom.tsx`),
-      context: {
-        id,
-        slug,
-      },
-    });
-  });
+  // result?.data?.allCmsCollection?.nodes?.forEach(({ infoPage }: any) => {
+    
+  //   const { slug } = infoPage.siteMetadataWithSlug.seo;
 
-  result?.data?.allCmsCollection?.nodes?.forEach(({ infoPage }: any) => {
-    const { slug } = infoPage.siteMetadataWithSlug.seo;
-
-    createPage({
-      path: `${slug}`,
-      component: path.resolve(`./src/pages/landing-page-collection.tsx`),
-      context: {
-        slug,
-      },
-    });
-  });
+  //   createPage({
+  //     path: `${slug}`,
+  //     component: path.resolve(`./src/pages/landing-page-collection.tsx`),
+  //     context: {
+  //       slug,
+  //     },
+  //   });
+  // });
 
   result?.data?.allCmsHome?.nodes?.forEach(async ({ sections }: any) => {
     let elements: any[] = []
