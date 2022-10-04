@@ -70,7 +70,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // graphql,
 }) => {
   const { createPage, createRedirect } = actions;
-  const result = ''
   // const result: any = await graphql(`
   //   query {
   //     allCmsInstitutionalPage {
@@ -181,48 +180,48 @@ export const createPages: GatsbyNode["createPages"] = async ({
   //   });
   // });
 
-  result?.data?.allCmsHome?.nodes?.forEach(async ({ sections }: any) => {
-    let elements: any[] = []
+  // result?.data?.allCmsHome?.nodes?.forEach(async ({ sections }: any) => {
+  //   let elements: any[] = []
 
-    await sections.filter((section: any) => {
-      if (section.data.carroselImages || section.data.banners) {
-        return section
-      }
-    }).map((section: any) => {
+  //   await sections.filter((section: any) => {
+  //     if (section.data.carroselImages || section.data.banners) {
+  //       return section
+  //     }
+  //   }).map((section: any) => {
     
-      if(section.data.banners){
-        const items = section.data.banners.filter((item: any) => {
-          if(item.collectionId){
-            return item
-          }
-        })
+  //     if(section.data.banners){
+  //       const items = section.data.banners.filter((item: any) => {
+  //         if(item.collectionId){
+  //           return item
+  //         }
+  //       })
 
-        elements.push(...items)
-      }
+  //       elements.push(...items)
+  //     }
 
-      if(section.data.carroselImages){
+  //     if(section.data.carroselImages){
 
-        const items = section.data.carroselImages.filter((item: any) => {
-          if(item.collectionId){
-            return item
-          }
-        })
+  //       const items = section.data.carroselImages.filter((item: any) => {
+  //         if(item.collectionId){
+  //           return item
+  //         }
+  //       })
 
-        elements.push(...items)
-      }
-    })
+  //       elements.push(...items)
+  //     }
+  //   })
 
-    elements.map((element) => {
-      createPage({
-        path: `${element.link}`,
-        component: path.resolve(`./src/pages/landing-page-collection-fixed.tsx`),
-        context: {
-          slug: `${element.link}`,
-          collectionId: `${element.collectionId}`
-        },
-      });
-    })
-  });  
+  //   elements.map((element) => {
+  //     createPage({
+  //       path: `${element.link}`,
+  //       component: path.resolve(`./src/pages/landing-page-collection-fixed.tsx`),
+  //       context: {
+  //         slug: `${element.link}`,
+  //         collectionId: `${element.collectionId}`
+  //       },
+  //     });
+  //   })
+  // });  
 
   createRedirect({
     fromPath: '/sitemap.xml',
