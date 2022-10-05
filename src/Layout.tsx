@@ -4,7 +4,7 @@ import Header from "src/components/common/Header";
 import { useUI } from "src/sdk/ui/Provider";
 import type { PropsWithChildren } from "react";
 import "src/styles/pages/layout.scss";
-import Toast from "./components/common/Toast";
+// import Toast from "./components/common/Toast";
 import AgeGate from "./components/common/AgeGate";
 const CartSidebar = lazy(() => import("src/components/cart/CartSidebar"));
 

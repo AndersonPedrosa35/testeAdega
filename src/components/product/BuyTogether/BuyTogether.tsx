@@ -15,7 +15,7 @@ const BuyTogether = ({ product }: IBuyTogether) => {
   async function getBuyTogether() {
     try {
       const data = await fetch(
-        "https://testemiddleware--adegamarche.myvtex.com/_v/buyTogether",
+        "https://testemiddleware--adegamarchehlg.myvtex.com/_v/buyTogether",
         {
           method: "POST",
           body: JSON.stringify({

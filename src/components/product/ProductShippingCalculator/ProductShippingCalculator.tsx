@@ -26,7 +26,7 @@ const ProductShippingCalculator = ({ id, seller }: Props) => {
       setLoading(true)
       if (zip?.length > 0) {
         const data = await fetch(
-          'https://testemiddleware--adegamarche.myvtex.com/_v/simulate',
+          'https://testemiddleware--adegamarchehlg.myvtex.com/_v/simulate',
           {
             method: 'POST',
             body: JSON.stringify({
