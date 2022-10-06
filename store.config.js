@@ -24,11 +24,11 @@ module.exports = {
 
 
   // Production URLs
-  storeUrl: 'https://www.homolog.adegamarche.com.br',
-  secureSubdomain: 'https://secure.homolog.adegamarche.com.br',
-  checkoutUrl: 'https://secure.homolog.adegamarche.com.br/checkout',
-  loginUrl: 'https://secure.homolog.adegamarche.com.br/api/io/login',
-  accountUrl: 'https://secure.homolog.adegamarche.com.br/api/io/account',
+  storeUrl: 'https://www.adegamarchehlg.com.br',
+  secureSubdomain: 'https://secure.adegamarchehlg.com.br',
+  checkoutUrl: 'https://secure.adegamarchehlg.com.br/checkout',
+  loginUrl: 'https://secure.adegamarchehlg.com.br/api/io/login',
+  accountUrl: 'https://secure.adegamarchehlg.com.br/api/io/account',
 
   // Lighthouse CI
   lighthouse: {

@@ -21,6 +21,7 @@ export const useImage = ({
   options = {},
   ...rest
 }: ImageOptions): ImgHTMLAttributes<HTMLImageElement> => {
+  // console.log(rest, "SPRED DAS PROPS PARA A IMAGEM")
   const { srcSet, src } = useMemo(() => {
     const builder = urlBuilder(baseUrl, options)
 

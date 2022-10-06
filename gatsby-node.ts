@@ -168,7 +168,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
   });
 
   result?.data?.allCmsCollection?.nodes?.forEach(({ infoPage }: any) => {
-    
     const { slug } = infoPage.siteMetadataWithSlug.seo;
 
     createPage({

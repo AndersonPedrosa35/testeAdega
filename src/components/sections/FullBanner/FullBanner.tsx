@@ -4,7 +4,7 @@ import Banner from 'src/components/sections/Banner'
 
 const FullBanner = ({ banners }: IBanners) => {
 
-    if(!banners.length) return null
+    if(!banners?.length) return null
 
     if (banners?.length > 1) {
       return (
