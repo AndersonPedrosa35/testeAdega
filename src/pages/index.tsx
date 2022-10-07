@@ -23,6 +23,8 @@ function Page(props: Props) {
   return (
     <>
       <GatsbySeo
+        noindex 
+        nofollow
         title={title}
         description={site?.siteMetadata?.description ?? ""}
         language={locale}
