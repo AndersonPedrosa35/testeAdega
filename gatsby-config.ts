@@ -187,6 +187,7 @@ const gatsbyConfig: GatsbyConfig = {
       options: {
         workspace: 'master',
         tenant: config.api.storeId,
+        
       },
     },
   ],
