@@ -22,7 +22,7 @@ const Newsletter = () => {
       const data = { email: emailNewsletter }
       setLoading(true)
 
-        fetch(`https://testemiddleware--adegamarchehlg.myvtex.com/_v/newsletter`, {
+        fetch(`https://testemiddleware--homolog.adegamarche.myvtex.com/_v/newsletter`, {
           method: 'POST',
           body: JSON.stringify(data),
         })

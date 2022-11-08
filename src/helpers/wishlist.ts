@@ -67,7 +67,7 @@ export function updateWishlist(userId: string, items: string) {
 export async function setDataInitialWishlistLocal(userId: string) {
   if (JSON.parse(getDataWishlist()).length === 0) {
     const data = await fetch(
-      `https://testemiddleware--adegamarchehlg.myvtex.com/_v/wishlist/${userId}`
+      `https://testemiddleware--homolog.adegamarche.myvtex.com/_v/wishlist/${userId}`
     )
 
     const dataJson = await data.json()

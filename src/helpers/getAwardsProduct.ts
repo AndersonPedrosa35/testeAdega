@@ -11,6 +11,6 @@ export const serealizeAwardsProduct = ({ DescriptionAward, ImageAward, TitleAwar
 })
 
 export default async function getAwardsProduct(id: string) {
-  return fetch(`https://anderson--adegamarchehlg.myvtex.com/_v/product/awards/${id}`)
+  return fetch(`https://anderson--homolog.adegamarche.myvtex.com/_v/product/awards/${id}`)
     .then((res) => res.json()).catch((err) => console.error(err))
 }

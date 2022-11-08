@@ -21,7 +21,7 @@ const BuyBox = ({ product }: Props) => {
 
   const shortDescriptionDefination = async () => {
     const data = await fetch(
-      `https://testemiddleware--adegamarchehlg.myvtex.com/_v/flagCollection/${id}`
+      `https://testemiddleware--homolog.adegamarche.myvtex.com/_v/flagCollection/${id}`
     ).then((response) => response.json());
 
     const shortDescriptionResponse = await data.complementName;

@@ -46,7 +46,7 @@
   "logo#desktop": {
     "props": {
       "title": "Logo",
-      "href": "https://adegamarchehlg.vtex.app/",
+      "href": "https://homolog.adegamarche.com.br/",
       "url": "assets/adegamarche-logo.svg",
       "width": "294"
     }
@@ -74,7 +74,7 @@
   "logo#mobile": {
     "props": {
       "title": "Logo",
-      "href": "https://adegamarchehlg.vtex.app/",
+      "href": "https://homolog.adegamarche.com.br/",
       "url": "assets/adegamarche-logo-mobile.svg",
       "width": "90"
     }
