@@ -187,7 +187,20 @@ const gatsbyConfig: GatsbyConfig = {
       options: {
         workspace: 'master',
         tenant: config.api.storeId,
-        
+      },
+    },
+    // {
+    //   resolve: `@vtex/gatsby-source-vtex`,
+    //   options: {
+    //       tenant: 'adegamarche', // VTEX account name
+    //       environment: 'vtexcommercestable', // it can be vtexcommercestable or vtexcommercebeta
+    //       workspace: 'master', // https://vtex.io/docs/concepts/workspace/ 
+    //   },
+    // },
+    {
+      resolve: '@vtex/gatsby-plugin-thumbor',
+      options: {
+        server: 'https://thumbor-dev-server.vtex.io'
       },
     },
   ],

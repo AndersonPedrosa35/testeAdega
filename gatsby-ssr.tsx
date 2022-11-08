@@ -29,15 +29,15 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
 }) => {
   setHeadComponents([
     <ThirdPartyScripts key="ThirdPartyScripts" />,
-    <meta name="viewport" key="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height" />
+    <meta name="viewport" key="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height" />,
   ])
   
   setPostBodyComponents([
     <link key="privacytoolslink" rel="stylesheet" href="https://cdn.privacytools.com.br/public_api/banner/style/9av111017161.css?t=1"></link>, 
-    <script key="privacytoolsbanner" type="text/javascript" src="https://cdn.privacytools.com.br/public_api/banner/script/bottom/9av111017161.js?t=1" />, 
+    <script key="privacytoolsbanner" type="text/javascript" async src="https://cdn.privacytools.com.br/public_api/banner/script/bottom/9av111017161.js?t=1" />,
     <noscript key="iframegtm">
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57237JB" height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe>
-    </noscript> 
+    </noscript>
   ])
 }
 

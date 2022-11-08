@@ -31,12 +31,12 @@
               },
               "mobileImageSize": {
                 "title": "Size mobile image",
-                "description": "Defina o tamanho de altura e largura da imagem no mobile",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 330x260",
                 "type": "string"
               },
               "desktopImageSize": {
                 "title": "Size desktop image",
-                "description": "Defina o tamanho de altura e largura da imagem no desktop",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 330x260",
                 "type": "string"
               },
               "alt": {
@@ -202,6 +202,16 @@
                   "ui:widget": "image-uploader"
                 }
               },
+              "mobileImageSize": {
+                "title": "Size mobile image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 330x260",
+                "type": "string"
+              },
+              "desktopImageSize": {
+                "title": "Size desktop image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 330x260",
+                "type": "string"
+              },
               "alt": {
                 "title": "Alt Banner",
                 "description": "Alt imagem",
@@ -234,6 +244,11 @@
                   "ui:widget": "image-uploader"
                 },
                 "description": "É recomendável que as imagens tenham 100x100px"
+              },
+              "imageSize": {
+                "title": "Tamanho da imagem",
+                "type": "string",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem, exemplo de inserção 100x100"
               },
               "alt": {
                 "title": "Alt imagem",
@@ -344,6 +359,16 @@
                   "ui:widget": "image-uploader"
                 }
               },
+              "mobileImageSize": {
+                "title": "Size mobile image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 330x260",
+                "type": "string"
+              },
+              "desktopImageSize": {
+                "title": "Size desktop image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 330x260",
+                "type": "string"
+              },
               "alt": {
                 "title": "Alt Banner",
                 "description": "Alt imagem",
@@ -376,6 +401,11 @@
                   "ui:widget": "image-uploader"
                 },
                 "description": "É recomendável que as imagens tenham 60x60px"
+              },
+              "imageSize": {
+                "title": "Tamanho da imagem",
+                "type": "string",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem, exemplo de inserção 60x60"
               },
               "alt": {
                 "title": "Alt imagem",
@@ -440,6 +470,16 @@
                   "ui:widget": "image-uploader"
                 }
               },
+              "mobileImageSize": {
+                "title": "Size mobile image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 306x460",
+                "type": "string"
+              },
+              "desktopImageSize": {
+                "title": "Size desktop image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 306x460",
+                "type": "string"
+              },
               "alt": {
                 "title": "Alt Banner",
                 "description": "Alt imagem",
@@ -490,6 +530,12 @@
                     "widget": {
                       "ui:widget": "image-uploader"
                     }
+                  },
+                  "imageSize": {
+                    "title": "Tamanho da imagem",
+                    "type": "string",
+    
+                    "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem, exemplo de inserção 100x100"
                   },
                   "alt": {
                     "title": "Alt Banner",
@@ -581,6 +627,16 @@
                 "ui:widget": "image-uploader"
               }
             },
+            "mobileImageSize": {
+              "title": "Size mobile image",
+              "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 1086x360",
+              "type": "string"
+            },
+            "desktopImageSize": {
+              "title": "Size desktop image",
+              "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 330x200",
+              "type": "string"
+            },
             "alt": {
               "title": "Alt Banner",
               "description": "Alt imagem",
@@ -658,6 +714,16 @@
                 "widget": {
                   "ui:widget": "image-uploader"
                 }
+              },
+              "mobileImageSize": {
+                "title": "Size mobile image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no mobile, exemplo de inserção 1440x320",
+                "type": "string"
+              },
+              "desktopImageSize": {
+                "title": "Size desktop image",
+                "description": "Defina o tamanho de largura e altura (nessa ordem) da imagem no desktop, exemplo de inserção 330x260",
+                "type": "string"
               },
               "alt": {
                 "title": "Alt Banner",

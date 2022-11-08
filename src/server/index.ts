@@ -73,9 +73,8 @@ export const execute = async (
   const {
     req: { headers },
   } = envelopContext
-  // console.log(query)
+
   if (query == null) {
-    // return
     throw new Error(`No query found for operationName: ${operationName}`)
   }
 

@@ -5,6 +5,6 @@ export const ImageHelper = (value: string) => {
       .replace(/[\u0300-\u036f]/g, '')
       .replace(/ /g, '-')
   
-    return `https://adegamarchehlg.vtexcommercestable.com.br/arquivos/${normalizedName}.png`
+    return `https://adegamarche.vtexcommercestable.com.br/arquivos/${normalizedName}.png`
 }
   

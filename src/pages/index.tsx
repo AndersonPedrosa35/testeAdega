@@ -15,7 +15,7 @@ function Page(props: Props) {
     data: { site, cmsHome },
     location: { pathname, host },
   } = props;
-
+  
   const { locale } = useSession();
   const title = site?.siteMetadata?.title ?? "";
   const siteUrl = `https://${host}${pathname}`;
@@ -23,8 +23,6 @@ function Page(props: Props) {
   return (
     <>
       <GatsbySeo
-        noindex 
-        nofollow
         title={title}
         description={site?.siteMetadata?.description ?? ""}
         language={locale}

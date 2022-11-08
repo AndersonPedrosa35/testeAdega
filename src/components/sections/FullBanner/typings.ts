@@ -6,7 +6,9 @@ export interface IBanners {
   
 export interface IBanner {
     desktopImage?: string
+    desktopImageSize?: string
     mobileImage?: string
+    mobileImageSize?: string
     link?: string
     alt?: string
     target?: boolean 

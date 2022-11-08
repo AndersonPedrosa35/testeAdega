@@ -21,7 +21,13 @@ function Page({ location }: Props) {
 
   return (
     <>
-      <GatsbySeo noindex nofollow />
+      <GatsbySeo 
+        noindex 
+        nofollow 
+        title="500"  
+        description="500"
+        titleTemplate="500"
+      />
 
       <h1>500</h1>
       <h2>Internal Server Error</h2>

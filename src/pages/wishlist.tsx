@@ -2,6 +2,7 @@ import React from 'react'
 import ProductShelf from 'src/components/sections/ProductShelf'
 import { Link } from 'gatsby'
 import { useGlobalContext } from 'src/hooks/useGlobalContext'
+import { GatsbySeo } from 'gatsby-plugin-next-seo'
 
 function Page() {
   const { itemsWishlist } = useGlobalContext()
@@ -20,20 +21,30 @@ function Page() {
   }
 
   return (
-    <section className="wishlist__products">
-      <ProductShelf
-        customClass="horizontal-line"
-        data={{
-          title: 'Wishlist',
-          searchParams: {
-            sort: 'score_desc',
-            maxQuantityProducts: 8,
-            hideUnavailableItems: true,
-            term: `sku:${itemsWishlist?.join(';')}`,
-          },
-        }}
+    <>
+      <GatsbySeo 
+        noindex 
+        nofollow 
+        title="wishlist"  
+        description="wishlist"
+        titleTemplate="wishlist"
       />
-    </section>
+
+      <section className="wishlist__products">
+        <ProductShelf
+          customClass="horizontal-line"
+          data={{
+            title: 'Wishlist',
+            searchParams: {
+              sort: 'score_desc',
+              maxQuantityProducts: 8,
+              hideUnavailableItems: true,
+              term: `sku:${itemsWishlist?.join(';')}`,
+            },
+          }}
+        />
+      </section>
+    </>
   )
 }
 

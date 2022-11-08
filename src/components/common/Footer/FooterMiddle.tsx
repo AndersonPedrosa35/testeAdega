@@ -40,7 +40,6 @@ function FooterMiddle() {
   if (!payments) {
     return null
   }
-
   return (
     <div className="footer__middle">
       <div className="container">

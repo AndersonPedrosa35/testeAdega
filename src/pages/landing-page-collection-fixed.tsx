@@ -35,8 +35,6 @@ function Page(props: Props) {
   return (
     <>
       <GatsbySeo
-        noindex 
-        nofollow
         title={"Coleção"}
         description={"Coleção"}
         titleTemplate={"Coleção"}

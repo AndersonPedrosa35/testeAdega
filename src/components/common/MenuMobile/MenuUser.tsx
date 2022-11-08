@@ -15,17 +15,6 @@ const MenuUser = () => {
     }
   }
 
-  // const handleLogout = () => {
-
-    // fetch('https://adegamarche.myvtex.com/api/vtexid/pub/logout?scope=adegamarche').then((response) => response.json()).then((response) => {
-    //   console.log(response)
-
-    //   window.location.href = ''
-    // })
-    //
-
-  // }
-
   useEffect(() => {
     createNewSession()
   }, [])
@@ -36,7 +25,6 @@ const MenuUser = () => {
         Olá! {` `} {session?.person?.givenName ? session?.person?.givenName : session?.person?.email}
         <span role="img" aria-label="Hand">
           👋 
-          {/* {session?.person?.id.length ?  <button className="header__navbar-sectionLogin--logout" onClick={() => handleLogout()}>sair</button> : null} */}
         </span>
       </h3>
       <ul>

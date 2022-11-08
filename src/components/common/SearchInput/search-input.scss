@@ -13,7 +13,7 @@
   }
 }
 
-[data-store-search-input] {
+[data-store-search-input], [data-fs-search-input-form] {
   position: relative;
   display: inline-flex;
   width: 100%;
@@ -25,7 +25,7 @@
     height: 46px;
   }
 
-  [data-store-input] {
+  [data-store-input], [data-fs-input] {
     width: 100%;
     border: none;
     border-radius: 0.25rem;
@@ -46,7 +46,7 @@
 
   [data-store-icon] { display: block; }
 
-  [data-store-button] {
+  [data-store-button], [data-fs-button] {
     position: absolute;
     right: 0;
     width: var(--fs-spacing-7);
@@ -61,7 +61,7 @@
     }
   }
 
-  [data-store-button] svg {
+  [data-store-button] svg, [data-fs-button] svg  {
     width: 1.5rem;
     height: 1.5rem; 
     color: var(--secondary-darkest);

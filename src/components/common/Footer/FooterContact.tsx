@@ -37,7 +37,6 @@ function FooterContact() {
   if (!contacts) {
     return null;
   }
-
   return (
     <div className="footer__contact">
       <div className="footer__contact-infos">

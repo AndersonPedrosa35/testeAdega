@@ -14,7 +14,6 @@ interface Props {
 
 function CartItem({ item }: Props) {
   const btnProps = useRemoveButton(item);
-
   return (
     <Card
       className="cart-item"

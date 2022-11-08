@@ -1,42 +1,51 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-import { flagImageHelper } from "src/helpers/flagImageHelper";
-import { IPropsPrizes, ISpecifications } from "./typings";
-import './product-flag.scss'
+// import { flagImagePrizeHelper } from "src/helpers/flagImageHelper";
+// import { IPropsPrizes } from "./typings";
+// import './product-flag.scss'
 
-const ProductFlagPrizes = ({ specifications , className }: IPropsPrizes) => {
-  const prizes = specifications.filter((prize) => prize.name === 'Prêmios')
+// const ProductFlagPrizes = ({ specifications , className }: IPropsPrizes) => {
+//   const [loadImage, setLoadImage] = useState(false)
+//   const [open, setOpen] = useState(false)
+//   const prizes = specifications.find((prize) => prize.name === 'Prêmios')
 
-  const [open, setOpen] = useState<boolean>(false);
+//   if (!prizes?.value ) {
+//     return null;
+//   }
+  
+//   const prizeUrlsLinksImg = prizes.value.split('|')
 
-  if (!prizes.length) {
-    return null;
-  }
+//   return (
+//     <div className={`flag__prizes ${className} `}>
+//       <div
+//         className={`flag__prizes--list ${
+//           open ? "flag__prizes--list-open" : ""
+//         }`}
+//       >       
+//         {prizeUrlsLinksImg.map((imgLink, index) => (
+//           <img
+//             key={imgLink.trim()}
+//             className={`flag__prizes--image flag__award flag__award${index} ${loadImage ? 'loaded' : ''}`}
+//             alt={`Prêmio do Produto`}
+//             src={flagImagePrizeHelper(imgLink.trim())}
+//             width={40}
+//             height={40}
+//             onLoad={() => {
+//                 setLoadImage(true)
+//             }}
+//           />
+//         ))}        
+//       </div>
+//       {!open && prizeUrlsLinksImg.length > 1 ? (
+//         <button
+//           onClick={() => setOpen(!open)}
+//           className="flag__prizes--showMore"
+//         >
+//           { `+${prizeUrlsLinksImg.length - 2}` }
+//         </button>
+//       ) : null}
+//     </div>
+//   );
+// };
 
-  return (
-    <div className={`flag__prizes ${className}`}>
-      <div
-        className={`flag__prizes--list ${
-          open ? "flag__prizes--list-open" : ""
-        }`}
-      >
-        {prizes.map((prize: ISpecifications) => (
-          <img
-            className="flag__prizes--image"
-            key={prize.name}
-            alt="Imagem de Prêmio do Produto"
-            src={flagImageHelper(prize.value)}
-          />
-        ))}
-      </div>
-      {!open && prizes.length > 1 ? (
-        <button
-          onClick={() => setOpen(!open)}
-          className="flag__prizes--showMore"
-        >{`+${prizes.length - 2}`}</button>
-      ) : null}
-    </div>
-  );
-};
-
-export default ProductFlagPrizes;
+// export default ProductFlagPrizes;

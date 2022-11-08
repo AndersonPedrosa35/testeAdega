@@ -5,7 +5,7 @@ import { DiscountBadge } from "src/components/ui/Badge";
 import { useFormattedPrice } from "src/sdk/product/useFormattedPrice";
 import Price from "src/components/ui/Price";
 import BuyButton from "../BuyButton/BuyButton";
-import { ProductFlagCollection, ProductFlagCountry, ProductFlagPrizes } from "../ProductFlag";
+import { ProductFlagCollection, ProductFlagCountry } from "../ProductFlag";
 import ButtonWishlist from "src/components/wishlist/ButtonWishlist";
 
 import {
@@ -15,6 +15,7 @@ import {
 import { Image } from "src/components/ui/Image";
 import { ProductCardProps } from "./typings";
 import "./product-card.scss";
+import ProductFlagAward from "../ProductFlag/ProductFlagAwards";
 
 const CardProduct = ({ product, index, aspectRatio = 1 }: ProductCardProps) => {
   const {
@@ -29,7 +30,6 @@ const CardProduct = ({ product, index, aspectRatio = 1 }: ProductCardProps) => {
 
   const linkProps = useProductLink({ product, selectedOffer: 0, index });
   const outOfStock = availability === "https://schema.org/OutOfStock";
-
   return (
     <article className={`productCard__item`}>
       <Link to={linkProps.href} title={name}> 
@@ -37,11 +37,11 @@ const CardProduct = ({ product, index, aspectRatio = 1 }: ProductCardProps) => {
           {!outOfStock ? (
             <DiscountBadge listPrice={listPrice} spotPrice={spotPrice} />
           ) : null}
-          <ProductFlagPrizes
-            specifications={specifications}
-            className="productCard__flag-prizes"
-          />
           <ProductFlagCountry
+            specifications={specifications}
+            className="productCard__flag-country"
+          />
+          <ProductFlagAward 
             specifications={specifications}
             className="productCard__flag-country"
           />
@@ -49,10 +49,11 @@ const CardProduct = ({ product, index, aspectRatio = 1 }: ProductCardProps) => {
           <Image
             src={img.url}
             alt={img.alternateName}
-            width={360}
-            height={360 / aspectRatio}
+            width={216}
+            height={216 / aspectRatio}
             sizes="(max-width: 768px) 25vw, 30vw"
             loading="lazy"
+            className="productCard__item__image"
           />
         </UIProductCardImage>
 

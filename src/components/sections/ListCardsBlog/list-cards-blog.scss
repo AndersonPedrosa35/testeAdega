@@ -78,6 +78,7 @@
       text-align: center;
       margin-bottom: 0.75rem;
       color: var(--primary-darkest);
+      height: 42px;
     }
 
     &-text {
@@ -85,6 +86,16 @@
       color: var(--neutral-dark);
       margin-bottom: 1.5rem;
       text-align: center;
+      height: 96px;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+
+      @include mobile {
+        height: 80px;
+      }
     }
 
     &-link {

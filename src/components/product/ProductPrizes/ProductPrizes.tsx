@@ -1,41 +1,47 @@
 import SectionInfoProduct from 'src/components/sections/SectionInfoProduct'
-import { ImageHelper } from 'src/helpers/imageHelper'
+// import { ImageHelper } from 'src/helpers/imageHelper'
 import { IProductSpecifications } from './typings'
 import './product-prizes.scss'
+import { useEffect, useState } from 'react'
+import getAwardsProduct, { serealizeAwardsProduct } from 'src/helpers/getAwardsProduct'
 
-const ProductPrizes = ( { specifications } : IProductSpecifications) => {
+interface awardsProductProps {
+  DescriptionAward: string
+  ImageAward: string
+  TitleAward: string
+}
 
-    const prizes =
-    specifications?.filter((prize) => prize.name === 'Prêmios') ?? []
+const ProductPrizes = ( { id } : IProductSpecifications) => {
+    const [awardsProduct, setAwardsProduct] = useState<any>([])
 
-    if(!prizes.length) {
-        return null
-    }
+    useEffect(() => {
+      getAwardsProduct(id)
+      .then((res) => {
+        setAwardsProduct(res)
+      }).catch((err) => console.error(err))
+    }, [])
 
-    return (
+    return awardsProduct.length ? (
         <SectionInfoProduct title="Premiação" className="prize__cards">
-            {prizes.map((prize, index) => {
-              const prizeDescription = specifications?.find(
-                (item) => item.name === prize.value
-              )
-
+            {awardsProduct.map((award: awardsProductProps, index: number) => {
+              const { description, image, title } = serealizeAwardsProduct(award)
               return (
                 <div
                   className="prize__card"
-                  key={`${prize.name}--${index}`}
+                  key={`${title}--${index}`}
                 >
                   <img
-                    alt={`Imagem do Prêmio ${prize.value}`}
-                    src={ImageHelper(prize.value)}
+                    alt={`Imagem do Prêmio ${title}`}
+                    src={image}
                     className="prize__card-image"
                   />
                   <div className="prize__card-content">
                     <span className="prize__card-title">
-                      {prize.value}
+                      {title}
                     </span>
-                    {prizeDescription && (
+                    {description && (
                       <p className="prize__card-description">
-                        {prizeDescription.value}
+                        {description}
                       </p>
                     )}
                   </div>
@@ -43,7 +49,7 @@ const ProductPrizes = ( { specifications } : IProductSpecifications) => {
               )
             })}
         </SectionInfoProduct>
-    )
+      ): null
 }
 
 export default ProductPrizes

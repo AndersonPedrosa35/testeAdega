@@ -6,7 +6,13 @@ function Page() {
 
   return (
     <>
-      <GatsbySeo noindex nofollow />
+      <GatsbySeo 
+        noindex 
+        nofollow 
+        title="500"  
+        description="500"
+        titleTemplate="500"
+      />
 
       <div className="message__error message__error-notFound">
         <div>OOPS!</div>

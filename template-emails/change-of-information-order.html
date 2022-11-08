@@ -351,7 +351,7 @@
                                 padding-top: 2rem;
                               "
                             >
-                              Seu pedido
+                              Ops! Alteramos o seu pedido
                             </font>
                             <font
                               style="
@@ -365,7 +365,11 @@
                                 color: #72537d;
                               "
                             >
-                              foi alterado!
+                            {{#if orders}} {{#each orders}} 
+                              {{orderId}}
+                            {{/each}} {{else}} 
+                              {{orderId}}
+                            {{/if}}
                             </font>
 
 
@@ -451,9 +455,9 @@
                                 box-sizing: border-box;
                               "
                             >
-                              Seu pedido foi alterado. <br />
+                              Seu pedido foi alterado. Infelizmente, um ou mais itens estão indisponíveis. <br />
+                              Mas, fique tranquilo que entregaremos os demais produtos do pedido! O valor pago será corrigido e a diferença estornada no cartão, num prazo máximo de até 7 dias úteis, após a emissão da nota fiscal. <br />
                               Confira os detalhes abaixo:
-                            </p>
                           </td>
                         </tr>
                       </table>
@@ -1714,6 +1718,153 @@
 
             <!-- Products end -->
 
+            <!-- Products unavailable -->
+            {{#if changeData}}
+            {{#each changeData.changesData}} 
+                <tr
+                    class="container-inner"
+                    style="box-sizing: border-box !important"
+                >
+                    <td
+                        style="
+                            font-size: 14px;
+                            mso-line-height-rule: exactly;
+                            line-height: 20px;
+                            width: 100%;
+                            box-sizing: border-box;
+                            border-collapse: collapse;
+                            text-align: left !important;
+                            font-family: -apple-system, Arial, BlinkMacSystemFont,
+                            'Segoe UI', Roboto, Helvetica, sans-serif;
+                        "
+                        align="left"
+                    >
+                        <br />
+                        <br />
+                        <br />
+            
+                        <font
+                            style="
+                                display: block;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #101820 !important;
+                                padding: 0 0 8px;
+                            "
+                        >
+                            {{#eq reason "Unavailable Product"}} Alteração no pedido - Produtos indisponíveis {{/eq}}
+                        </font>
+                    
+                        <table
+                            style="
+                            background-color: #f9f9f9;
+                            box-sizing: border-box;
+                            width: 100%;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            mso-table-lspace: 0pt;
+                            mso-table-rspace: 0pt !important;
+                            font-family: -apple-system, Arial, BlinkMacSystemFont,
+                                'Segoe UI', Roboto, Helvetica, sans-serif;
+                            "
+                        >
+                            <tbody>
+                                {{#if itemsRemoved}}
+                                    {{#each itemsRemoved}} 
+                                        <tr style="box-sizing: border-box !important">
+                                            <td style="padding: 2rem 0 1rem">
+                                                <img src="{{imageUrl}}" alt="" style="height: 4rem" />
+                                            </td>
+            
+                                            <td
+                                                style="
+                                                    font-size: 14px;
+                                                    mso-line-height-rule: exactly;
+                                                    line-height: 20px;
+                                                    box-sizing: border-box;
+                                                    text-align: left !important;
+                                                    padding: 10px 0 0;
+                                                    font-family: -apple-system, Arial, BlinkMacSystemFont,
+                                                    'Segoe UI', Roboto, Helvetica, sans-serif;
+                                                "
+                                                align="left"
+                                            >
+                                                <table
+                                                    style="
+                                                    box-sizing: border-box;
+                                                    width: 100%;
+                                                    border-spacing: 0;
+                                                    mso-table-lspace: 0pt;
+                                                    mso-table-rspace: 0pt !important;
+                                                    font-family: -apple-system, Arial,
+                                                        BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+                                                        sans-serif;
+                                                    "
+                                                >
+                                                    <tr style="box-sizing: border-box !important">
+                                                        <td
+                                                            style="
+                                                            width: 100%;
+                                                            font-size: 14px;
+                                                            mso-line-height-rule: exactly;
+                                                            line-height: 20px;
+                                                            box-sizing: border-box;
+                                                            border-collapse: collapse;
+                                                            text-align: left !important;
+                                                            padding: 20px 24px;
+                                                            font-family: -apple-system, Arial,
+                                                                BlinkMacSystemFont, 'Segoe UI', Roboto,
+                                                                Helvetica, sans-serif;
+                                                            "
+                                                            align="left"
+                                                        >
+                                                            <font
+                                                            style="
+                                                                display: block;
+                                                                font-size: 12px;
+                                                                mso-line-height-rule: exactly;
+                                                                line-height: 16px;
+                                                                font-weight: 400;
+                                                                color: #101820 !important;
+                                                            "
+                                                            >
+                                                            {{name}}
+                                                            </font>
+                                                        </td>
+                                                
+                                                        <td
+                                                            style="
+                                                            mso-line-height-rule: exactly;
+                                                            line-height: 24px;
+                                                            box-sizing: border-box;
+                                                            border-collapse: collapse;
+                                                            font-size: 16px;
+                                                            color: #101820;
+                                                            text-align: right !important;
+                                                            font-family: -apple-system, Arial,
+                                                                BlinkMacSystemFont, 'Segoe UI', Roboto,
+                                                                Helvetica, sans-serif;
+                                                            "
+                                                            align="right"
+                                                        >
+                                                            {{quantity}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    {{/each}}
+                                {{/if}}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            {{/each}}
+            {{/if}}
+        
+
+            <!-- End Products unavailable -->
+
             <!-- Button -->
 
             <tr style="box-sizing: border-box !important">
@@ -1803,7 +1954,7 @@
                             "Shipping"}}Entrega: {{/eq}} {{#eq id
                             "Discounts"}}Descontos: {{/eq}} {{#eq id
                             "Tax"}}Taxas: {{/eq}} {{#eq id
-                            "Change"}}Total das mudanças: {{/eq}}
+                            "Change"}}Alterações: {{/eq}}
                           </td>
                           <td
                             style="
@@ -1914,7 +2065,7 @@
                             "Shipping"}}Entrega: {{/eq}} {{#eq id
                             "Discounts"}}Descontos: {{/eq}} {{#eq id
                             "Tax"}}Taxas: {{/eq}} {{#eq id
-                            "Change"}}Total das mudanças: {{/eq}}
+                            "Change"}}Alterações: {{/eq}}
                           </td>
                           <td
                             style="

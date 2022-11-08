@@ -1,5 +1,8 @@
 
-import { ImageHelper } from 'src/helpers/imageHelper'
+// import { StaticImage } from "gatsby-plugin-image";
+import { useState } from "react";
+
+import { flagImageHelper } from 'src/helpers/flagImageHelper'
 import './product-flag.scss'
 
 interface IProductFlagCountry{
@@ -11,19 +14,26 @@ interface IProductFlagCountry{
 }
 
 const ProductFlagCountry = ({ specifications, className } : IProductFlagCountry) => {
+    const [loadImage, setLoadImage] = useState(false)
     const [country] = specifications.filter(prop => prop.name === 'País')
 
     if (!country) {
         return null 
     }
 
-    return(
+    return (
         <>
-            {country && (
+            {country &&  (
+                
                 <img
-                    className={`flag__country ${className}`}
+                    className={`flag__country ${className} ${loadImage ? 'loaded' : ''}`}
                     alt={`Flag vinho do país ${country.value}`}
-                    src={ImageHelper(country.value)}
+                    src={flagImageHelper(country.value)}
+                    width={24}
+                    height={24}
+                    onLoad={() => {
+                        setLoadImage(true) 
+                    }}
                 />
             )}
         </>

@@ -37,8 +37,6 @@ function Page(props: Props) {
   return (
     <>
       <GatsbySeo
-        noindex 
-        nofollow
         title={seo?.title ?? 'Landing Page Custom'}
         description={seo?.description ?? 'Landing Page Custom'}
         titleTemplate={seo?.title ?? 'Landing Page Custom'}

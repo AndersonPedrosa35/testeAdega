@@ -1,6 +1,7 @@
 import ProductImages from 'src/components/product/ProductImages'
-import { ProductFlagPrizes, ProductFlagCountry } from 'src/components/product/ProductFlag'
+import { ProductFlagCountry } from 'src/components/product/ProductFlag'
 import ButtonWishlist from "src/components/wishlist/ButtonWishlist";
+import ProductFlagAward from '../ProductFlag/ProductFlagAwards';
 
 interface Props {
     productImages: any
@@ -11,13 +12,14 @@ interface Props {
     id: string
 }
 
-const ProductGallery = ({ productImages, specifications, id}: Props) => {
+const ProductGallery = (props: Props) => {
+    const { productImages, specifications, id} = props
     
     return (
         <div className="product__main-image">
             <ButtonWishlist id={id}/>
             <ProductFlagCountry specifications={specifications} className='product__flag-country' />
-            <ProductFlagPrizes specifications={specifications} /> 
+            <ProductFlagAward specifications={specifications} />
             <ProductImages images={productImages} />
          </div>
     )

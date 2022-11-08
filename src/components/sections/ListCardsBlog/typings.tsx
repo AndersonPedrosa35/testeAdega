@@ -17,6 +17,7 @@ export interface ICardContent {
 export interface ICardImage {
   alt?: string;
   image: string;
+  imageSize: string
 }
 
 export interface ICardBlogAllContent {

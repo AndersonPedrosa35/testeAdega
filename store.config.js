@@ -1,10 +1,14 @@
 module.exports = {
+    // Theming
+    theme: 'custom-theme',
+
   // Ecommerce Platform
   platform: 'vtex',
 
   // Platform specific configs for API
   api: {
-    storeId: 'adegamarchehlg',
+    storeId: 'adegamarche',
+    workspace: 'master',
     environment: 'vtexcommercestable',
     hideUnavailableItems: false,
   },
@@ -24,11 +28,11 @@ module.exports = {
 
 
   // Production URLs
-  storeUrl: 'https://homolog.adegamarche.com.br',
-  secureSubdomain: 'https://secure.homolog.adegamarche.com.br',
-  checkoutUrl: 'https://secure.homolog.adegamarche.com.br/checkout',
-  loginUrl: 'https://secure.homolog.adegamarche.com.br/api/io/login',
-  accountUrl: 'https://secure.homolog.adegamarche.com.br/api/io/account',
+  storeUrl: 'https://www.adegamarche.com.br',
+  secureSubdomain: 'https://secure.adegamarche.com.br',
+  checkoutUrl: 'https://secure.adegamarche.com.br/checkout',
+  loginUrl: 'https://secure.adegamarche.com.br/api/io/login',
+  accountUrl: 'https://secure.adegamarche.com.br/api/io/account',
 
   // Lighthouse CI
   lighthouse: {

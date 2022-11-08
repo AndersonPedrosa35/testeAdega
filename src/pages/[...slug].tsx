@@ -165,7 +165,6 @@ export const getServerData = async ({
 }: {
   params: Record<string, string>;
 }) => {
-
   const ONE_YEAR_CACHE = `s-maxage=31536000, stale-while-revalidate`;
   const { isNotFoundError } = await import("@faststore/api");
   const { execute } = await import("src/server/index");

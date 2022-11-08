@@ -6,14 +6,40 @@ import { isInViewport } from 'src/helpers/isInViewPort'
 import { sendAnalyticsEvent } from '@faststore/sdk'
 import type { ViewPromotionEvent, PromotionItem} from '@faststore/sdk'
 
-const Banner = ({ banner }: IBannerProps) => {
+import { useThumborImageData } from '@vtex/gatsby-plugin-thumbor'
 
+export function splitStringSizeinWidthAndHeight(size: string | undefined) {
+    if (size) {
+      const arraySize = size.split('x');
+      return { width: parseFloat(arraySize[0]), height: parseFloat(arraySize[1]) }
+    }
+    return undefined
+  }
+
+const Banner = ({ banner }: IBannerProps) => {
     if (!banner){
         return null
     }
+    const imageMobileSize = splitStringSizeinWidthAndHeight(banner.mobileImageSize)
+    
+    let thumborImage: any
+    const imageDesktopSize = splitStringSizeinWidthAndHeight(banner.desktopImageSize)
+    if (!IsMobile()) {
+        thumborImage = useThumborImageData({
+            baseUrl: banner.desktopImage ?? '',
+            height: imageDesktopSize?.height ?? 1000,
+            width: imageDesktopSize?.width ?? 1440,
+        })
+    } else {        
+        thumborImage = useThumborImageData({
+            baseUrl: banner.mobileImage ?? '',
+            height: imageMobileSize?.height ?? 600,
+            width: imageMobileSize?.width ?? 660,
+        })
+    }
 
     const sendAnalyticsBannerData = () => {
-        let element = document.querySelector(`img[alt="${banner.alt}"]`) as HTMLElement | null;
+        const element = document.querySelector(`img[alt="${banner.alt}"]`) as HTMLElement | null;
 
         if(isInViewport(element)){
     
@@ -34,30 +60,32 @@ const Banner = ({ banner }: IBannerProps) => {
     }
 
     const Image = () => {
-
-        if(!banner.desktopImage || !banner.mobileImage){
-
-            if(IsMobile() && banner.mobileImage){
-                return <img src={banner.mobileImage} alt={banner.alt || ''} />
-            } 
-
-            if(!IsMobile() && banner.desktopImage){
-                return <img src={banner.desktopImage} alt={banner.alt || ''} />
-            }
-
-            return null
+        if(!IsMobile()){
+            return <img
+                src={thumborImage?.images?.fallback?.src}
+                alt={banner.alt || ''}
+                width={'100%'} 
+                height={imageDesktopSize?.height}
+            />
+        } else if(IsMobile()){
+            return <img 
+                src={thumborImage?.images?.fallback?.src}
+                alt={banner.alt || ''}
+                width={'100%'} 
+                height={imageMobileSize?.height}
+            />
         }
-
         return (
             <ImageResponsive 
-                src={banner.desktopImage || '/'}  
-                srcMobile={banner.mobileImage || '/'} 
+                src={thumborImage?.images?.fallback?.src || '/'}  
+                srcMobile={thumborImage?.images?.fallback?.src || '/'} 
                 alt={banner.alt || ''}
             /> 
         )
     }
 
     if (banner?.link && banner?.link?.length > 0) {
+        
         return (
             <Link to={banner.link} title={banner.alt || ''} target={banner.target ? '_blank' : '_self'}>
                 <Image /> 

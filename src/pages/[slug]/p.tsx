@@ -102,7 +102,7 @@ function Page(props: Props) {
       <Breadcrumb breadcrumbList={product.breadcrumbList.itemListElement ?? []}/>
       <ProductDetails product={product} />
 
-      <ProductPrizes specifications={product?.isVariantOf?.additionalProperty} /> 
+      <ProductPrizes id={product?.id} specifications={product?.isVariantOf?.additionalProperty} /> 
       <ProductDescription description={product.description ?? ''} /> 
       <ProductSpecifications specifications={product?.isVariantOf?.additionalProperty}/>
 

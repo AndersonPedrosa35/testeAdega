@@ -10,7 +10,7 @@ const ProductFlagCollection = ({ idProduct, className }: IProps) => {
 
   const clusters = async () => {
     const data = await fetch(
-      `https://testemiddleware--adegamarchehlg.myvtex.com/_v/flagCollection/${idProduct}`
+      `https://testemiddleware--adegamarche.myvtex.com/_v/flagCollection/${idProduct}`
     ).then((response) => response.json())
 
     const cluster = data?.clusterHighlights

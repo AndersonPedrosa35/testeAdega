@@ -1,5 +1,6 @@
 import { forwardRef, memo } from 'react'
 import { Helmet } from 'react-helmet-async'
+// import Img from "gatsby-image"
 
 import { useImage } from './useImage'
 import type { ImageOptions } from './useImage'
@@ -22,36 +23,37 @@ interface Props extends ImageOptions {
   fetchPriority?: string
 }
 
-const Image = forwardRef<HTMLImageElement, Props>(
-  ({ preload = false, fetchPriority, ...otherProps }, ref) => {
-    const imgProps = useImage(otherProps)
-    const { src, sizes = '100vw', srcSet } = imgProps
-
-    return (
-      <>
-        {preload && (
-          <Helmet>
-            <link
-              as="image"
-              rel="preload"
-              href={src}
-              imageSrcSet={srcSet}
-              imageSizes={sizes}
-              fetchpriority={fetchPriority}
-            />
-          </Helmet>
-        )}
-        <img
-          ref={ref}
-          data-store-image
-          {...imgProps}
-          alt={imgProps.alt}
-          fetchpriority={fetchPriority}
-        />
-      </>
-    )
-  }
-)
+function Image() {
+  return forwardRef<HTMLImageElement, Props>(
+    ({ preload = false, fetchPriority, ...otherProps }, ref) => {
+      const imgProps = useImage(otherProps)
+      const { src, sizes = '100vw', srcSet } = imgProps
+      return (
+        <>
+          {preload && (
+            <Helmet>
+              <link
+                as="image"
+                rel="preload"
+                href={src}
+                imageSrcSet={srcSet}
+                imageSizes={sizes}
+                fetchpriority={fetchPriority}
+              />
+            </Helmet>
+          )}
+          <img
+            ref={ref}
+            data-fs-image
+            {...imgProps}
+            alt={imgProps.alt}
+            fetchpriority={fetchPriority}
+          />
+        </>
+      )
+    }
+  )
+}
 
 Image.displayName = 'Image'
-export default memo(Image)
+export default memo(Image())

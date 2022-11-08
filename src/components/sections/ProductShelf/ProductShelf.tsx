@@ -50,7 +50,7 @@ const ProductShelf = ({
   }
 
   const sendAnalyticsData = () => {
-    let element = document.querySelector(`#${id}`) as HTMLElement | null;
+    const element = document.querySelector(`#${id}`) as HTMLElement | null;
 
     if(isInViewport(element)){
 

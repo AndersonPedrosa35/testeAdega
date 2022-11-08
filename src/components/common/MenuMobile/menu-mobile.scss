@@ -5,7 +5,8 @@
     &-sidebar {
       padding: 1rem;
 
-      &[data-store-modal-content=true]{
+      &[data-store-modal-content=true],
+      &[data-fs-modal-content=true]{
         overflow: scroll;
       }
 

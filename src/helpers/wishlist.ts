@@ -45,7 +45,7 @@ export function updateWishlist(userId: string, items: string) {
     items,
   }
 
-  fetch(`https://testemiddleware--adegamarchehlg.myvtex.com/_v/createWishlist`, {
+  fetch(`https://testemiddleware--adegamarche.myvtex.com/_v/createWishlist`, {
     method: 'POST',
     body: JSON.stringify(data),
   })

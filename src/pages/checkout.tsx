@@ -10,7 +10,13 @@ function Page() {
 
   return (
     <>
-      <GatsbySeo noindex nofollow />
+      <GatsbySeo 
+        noindex 
+        nofollow 
+        title="Checkout"  
+        description="Checkout"
+        titleTemplate="Checkout"
+      />
 
       <div>loading...</div>
     </>
